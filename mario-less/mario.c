@@ -5,23 +5,26 @@
 int main(void)
 {
     int height;
+    //Get Height From the User
     do
     {
         height = get_int("Height: ");
     }
-    while(height <= 0 || height > 8);
+    while (height <= 0 || height > 8);
 
-    //printf("Stored: %i", height);
-
-    for(int i = 0; i < height; i++)
+    //Create main loop to create triangle
+    for (int i = 0; i < height; i++)
     {
-        for(int space = (height - i); space > 1; space--){
+        //Add spaces to make triangle right aligned
+        for (int space = (height - i); space > 1; space--)
+        {
             printf(" ");
         }
 
-        for(int hashtag = 0; hashtag <= i; hashtag++)
+        //Add hashtag to triangle
+        for (int hashtag = 0; hashtag <= i; hashtag++)
         {
-           printf("#");
+            printf("#");
         }
 
 
