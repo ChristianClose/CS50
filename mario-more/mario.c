@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print right
+void rightLeaningTriangle(int height);
 
 int main(void)
 {
@@ -12,6 +12,13 @@ int main(void)
         }
     while (height <= 0 || height > 8);
 
+    rightLeaningTriangle(height);
+
+
+}
+
+void rightLeaningTriangle(int height)
+{
     for(int i = 0; i < height; i++)
     {
         for(int space = (height - i); space > 1; space--)
@@ -21,9 +28,8 @@ int main(void)
 
         for(int hashtag = 0; hashtag <= i; hashtag++)
         {
-            printf("#");
+            printf("#  ");
         }
         printf("\n");
     }
-
 }
