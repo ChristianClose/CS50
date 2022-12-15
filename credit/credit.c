@@ -14,18 +14,18 @@ void checkCreditCard(long number)
 {
     int doubledSum = 0;
     int sum = 0;
-    long num = number;
+    int num = number % 10;
+    int num2 = number / 10;
     int finalSum = 0;
 
     while(number){
         num %= 10;
         sum += num;
 
-        printf("num1: %ld\n", num);
+        num2 %= 10;
+        doubledSum += num2 * 2;
 
-        num /= 100;
-        printf("num2: %ld\n", num);
-        doubledSum += num * 2;
+        number /= 100;
     }
 
     finalSum = sum + doubledSum;
