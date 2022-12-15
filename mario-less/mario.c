@@ -5,9 +5,11 @@
 int main(void)
 {
     int height;
-    do{
+    do
+    {
         height = get_int("Height: ");
-    } while(height > 0 && height < 9);
+    }
+    while(height < 0 || height > 8);
 
     printf("Stored: %i", height);
 
