@@ -15,7 +15,7 @@ void checkCreditCard(long number)
     long temp = number;
     int sum = 0;
     int numOfDigits = 0;
-    int divisor = 0;
+    double divisor = 0;
     double firstDigit;
     double firstTwoDigits;
 
@@ -44,24 +44,23 @@ void checkCreditCard(long number)
 
     firstDigit = number / divisor;
     firstTwoDigits = number / (divisor / 10);
-    printf("Hello");
 
     if (sum % 10 == 0){
         if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
         {
-            printf("VISA");
+            printf("VISA\n");
         }
         else if ((firstTwoDigits == 34 || firstTwoDigits == 37) && numOfDigits == 15)
         {
-            printf("AMERICAN EXPRESS");
+            printf("AMERICAN EXPRESS\n");
         }
         else if ((firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54 || firstTwoDigits == 55) && numOfDigits == 16)
         {
-            printf("MASTERCARD");
+            printf("MASTERCARD\n");
         }
         else
         {
-            printf("INVALID");
+            printf("INVALID\n");
         }
     }
 
