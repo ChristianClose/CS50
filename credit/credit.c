@@ -28,6 +28,7 @@ void checkCreditCard(long number)
     }
 
     finalSum = sum + doubledSum;
+    printf("%i", finalSum);
 
     if(finalSum % 10 == 0){
         printf("Valid Card");
