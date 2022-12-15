@@ -14,7 +14,7 @@ void checkCreditCard(long number)
 {
     int doubledSum = 0;
     int sum = 0;
-    long num = 0;
+    long num = ;
     int finalSum = 0;
 
     while(number){
@@ -28,10 +28,12 @@ void checkCreditCard(long number)
     }
 
     finalSum = sum + doubledSum;
-    printf("%i", finalSum);
+    printf("%i\n", finalSum);
+    printf("%i\n", sum);
+    printf("%i\n", doubledSum);
 
     if(finalSum % 10 == 0){
-        printf("Valid Card");
+        printf("Valid Card\n");
     }
 
 
