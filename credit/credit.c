@@ -5,7 +5,7 @@ void checkCreditCard(long number[]);
 
 int main(void)
 {
-    long creditCardNum[] = get_long("Number: ");
+    long creditCardNum* = get_long("Number: ");
 
 }
 
