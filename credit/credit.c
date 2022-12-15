@@ -37,8 +37,6 @@ void checkCreditCard(long number)
 
     temp = number;
 
-    printf("Hello");
-
     while(temp){
         temp /= 10;
         numOfDigits++;
@@ -46,6 +44,7 @@ void checkCreditCard(long number)
 
     firstDigit = number / divisor;
     firstTwoDigits = number / (divisor / 10);
+    printf("Hello");
 
     if (sum % 10 == 0){
         if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
