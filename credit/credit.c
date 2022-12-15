@@ -13,7 +13,7 @@ void checkCreditCard(long number)
 {
     for(int i = sizeof number; i > 0; i-2)
     {
-
+        printf("%i", i);
     }
 }
 
