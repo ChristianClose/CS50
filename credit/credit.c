@@ -16,6 +16,8 @@ void checkCreditCard(long number)
     int sum = 0;
     int numOfDigits = 0;
     int divisor = 0;
+    int firstDigit;
+    int secondDigit;
 
     while(temp)
     {
@@ -40,8 +42,13 @@ void checkCreditCard(long number)
         numOfDigits++;
     }
 
-    if(sum % 10 == 0){
-        printf("Valid Card");
+    firstDigit = number / divisor;
+    secondDigit = number / (divisor / 10);
+
+    if (sum % 10 == 0){
+        if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16)){
+            printf("VISA");
+        } else if ()
     }
 
 
