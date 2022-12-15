@@ -11,7 +11,7 @@ int main(void)
     }
     while(height <= 0 || height > 8);
 
-    printf("Stored: %i", height);
+    //printf("Stored: %i", height);
 
     for(int i = 0; i < height; i++)
     {
