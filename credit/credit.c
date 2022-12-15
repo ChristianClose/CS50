@@ -90,7 +90,7 @@ string getCCProvider(long number, long divisor, int sum, int numOfDigits)
 {
     int firstDigit = number / divisor;
     int firstTwoDigits = number / (divisor / 10);
-    string provider = "";
+    string provider = "INVALID\n";
 
     if (sum % 10 == 0)
     {
