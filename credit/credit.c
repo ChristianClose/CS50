@@ -1,17 +1,18 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void checkCreditCard(long number[]);
+void checkCreditCard(long number);
 
 int main(void)
 {
-    long creditCardNum* = get_long("Number: ");
+    long creditCardNum = get_long("Number: ");
 
 }
 
-void checkCreditCard(long number[])
+void checkCreditCard(long number)
 {
-    for(int i = sizeof number; i > 0; number; i-2){
+    for(int i = sizeof number; i > 0; i-2)
+    {
 
     }
 }
