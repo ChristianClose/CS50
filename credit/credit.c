@@ -16,8 +16,8 @@ void checkCreditCard(long number)
     int sum = 0;
     int numOfDigits = 0;
     int divisor = 0;
-    int firstDigit;
-    int firstTwoDigits;
+    double firstDigit;
+    double firstTwoDigits;
 
     while(temp)
     {
@@ -36,6 +36,8 @@ void checkCreditCard(long number)
     }
 
     temp = number;
+
+    printf("Hello");
 
     while(temp){
         temp /= 10;
