@@ -6,12 +6,13 @@ void checkCreditCard(long number);
 int main(void)
 {
     long creditCardNum = get_long("Number: ");
+    printf(creditCardNum[1]);
 
 }
 
 void checkCreditCard(long number)
 {
-    for(int i = sizeof number; i > 0; i-2)
+    for(int i = sizeof number; i > 0; i-=2)
     {
         printf("%i", i);
     }
