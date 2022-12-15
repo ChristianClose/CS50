@@ -46,8 +46,8 @@ void checkCreditCard(long number)
     firstTwoDigits = number / (divisor / 10);
     printf("%i\n", sum);
     printf("%i\n", numOfDigits);
-    printf("%dd\n", firstDigit);
-    printf("%dd\n", firstTwoDigits);
+    printf("%f\n", firstDigit);
+    printf("%f\n", firstTwoDigits);
 
     if (sum % 10 == 0){
         if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
