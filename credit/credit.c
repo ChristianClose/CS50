@@ -37,7 +37,7 @@ void checkCreditCard(long number)
 
     temp = number;
 
-    while(number){
+    while(temp){
         temp /= 10;
         numOfDigits++;
     }
@@ -56,7 +56,7 @@ void checkCreditCard(long number)
         }
         else if ((firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54 || firstTwoDigits == 55) && numOfDigits == 16)
         {
-            printf("MASTERCARD);
+            printf("MASTERCARD");
         }
         else
         {
