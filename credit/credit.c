@@ -3,6 +3,10 @@
 
 int main(void)
 {
-    
+    long creditCardNum;
+
+    do
+    {}
+
 
 }
