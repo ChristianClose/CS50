@@ -15,11 +15,11 @@ int main(void)
 
     for(int i = 0; i < height; i++)
     {
-        for(int k = (height - i); k > 1; k--){
+        for(int space = (height - i); space > 1; space--){
             printf(" ");
         }
 
-        for(int j = 0; j <= i; j++)
+        for(int hashtag = 0; hashtag <= i; hashtag++)
         {
            printf("#");
         }
