@@ -6,7 +6,7 @@ string createTriangle(int base);
 int main(void)
 {
     string triangle = createTriangle(8);
-    printf("%s", triangle);
+    printf("%s\n", triangle);
 }
 
 string createTriangle(int base)
@@ -15,7 +15,8 @@ string createTriangle(int base)
 
     for(int i = 0; i < base; i++){
         triangle += '#';
-        printf("%s", triangle);
+        printf("%i\n", i);
+        printf("%s\n", triangle);
     }
 
     return triangle;
