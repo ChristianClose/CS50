@@ -57,9 +57,9 @@ void checkCreditCard(long number)
         }
         else if ((firstTwoDigits == 34 || firstTwoDigits == 37) && numOfDigits == 15)
         {
-            printf("AMERICAN EXPRESS\n");
+            printf("AMEX\n");
         }
-        else if ((firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54 || firstTwoDigits == 55) && numOfDigits == 16)
+        else if ((firstTwoDigits > 50 && firstTwoDigits < 56) && numOfDigits == 16)
         {
             printf("MASTERCARD\n");
         }
