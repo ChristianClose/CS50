@@ -21,6 +21,8 @@ void checkCreditCard(long number)
         num %= 10;
         sum += num;
 
+        printf("num1: %l", num);
+
         num /= 100;
         printf("%l", num);
         doubledSum += num * 2;
