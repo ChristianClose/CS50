@@ -17,14 +17,14 @@ void checkCreditCard(long number)
     long num = number;
     int finalSum = 0;
 
-    while(num){
+    while(number){
         num %= 10;
         sum += num;
 
-        printf("num1: %l", num);
+        printf("num1: %ld\n", num);
 
         num /= 100;
-        printf("%l", num);
+        printf("num2: %ld\n", num);
         doubledSum += num * 2;
     }
 
