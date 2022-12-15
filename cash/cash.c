@@ -28,11 +28,6 @@ int main(void)
     int pennies = calculate_pennies(cents);
     cents = cents - pennies * 1;
 
-    /*printf("quarters: %i \n", quarters);
-    printf("dimes: %i \n", dimes);
-    printf("nickels: %i \n", nickels);
-    printf("pennies: %i \n", pennies);*/
-
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
 
@@ -47,7 +42,7 @@ int get_cents(void)
     {
         cents = get_int("Change owed: ");
     }
-    while(cents <= 0);
+    while (cents <= 0);
 
     return cents;
 }
