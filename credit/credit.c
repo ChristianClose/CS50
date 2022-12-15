@@ -46,9 +46,14 @@ void checkCreditCard(long number)
     secondDigit = number / (divisor / 10);
 
     if (sum % 10 == 0){
-        if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16)){
+        if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
+        {
             printf("VISA");
-        } else if ()
+        }
+        else if (f)
+        {
+
+        }
     }
 
 
