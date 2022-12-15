@@ -49,7 +49,9 @@ void checkCreditCard(long number)
 
     firstDigit = number / divisor;
     firstTwoDigits = number / (divisor / 10);
+
     printf("%i\n", sum);
+    printf("%i\n", divisor);
     printf("%i\n", numOfDigits);
     printf("%i\n", firstDigit);
     printf("%i\n", firstTwoDigits);
