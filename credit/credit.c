@@ -12,7 +12,7 @@ int main(void)
 
 void checkCreditCard(long number)
 {
-    int sum = 0;
+    int sum = number % 10;
     
 }
 
