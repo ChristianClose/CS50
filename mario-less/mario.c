@@ -7,10 +7,10 @@ int main(void)
     int height;
     do{
         height = get_int("Height: ");
-    } while(height > 0 && height < 9);
+    } while(height > 0 || height < 9);
 
-    printf("Stored: $i", height);
-    
+    printf("Stored: %i", height);
+
     for(int i = 0; i < height; i++)
     {
         for(int k = (height - i); k > 0; k--){
