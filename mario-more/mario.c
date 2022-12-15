@@ -28,7 +28,7 @@ void createTriangles(height){
             printf(" ");
         }
 
-        for(int hashtag = 0; hashtag < i; hashtag++)
+        for(int hashtag = 0; hashtag <= i; hashtag++)
         {
             printf("#");
 
@@ -36,7 +36,7 @@ void createTriangles(height){
 
         printf("  ");
 
-        for (int hashtag = 0; hashtag < i; hashtag++){
+        for (int hashtag = 0; hashtag <= i; hashtag++){
             printf("#");
         }
 
