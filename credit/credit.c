@@ -28,6 +28,11 @@ void checkCreditCard(long number)
         int lastDigit = temp % 10;
         int doubled = lastDigit * 2;
         sum += (doubled % 10) + (doubled / 10);
+        temp /= 100;
+    }
+
+    if(sum % 10 == 0){
+        printf("Valid Card");
     }
 
 
