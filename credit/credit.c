@@ -18,10 +18,11 @@ void checkCreditCard(long number)
     int finalSum = 0;
 
     while(num){
-        num /= 10;
+        num %= 10;
         sum += num;
 
         num /= 100;
+        printf("%l", num);
         doubledSum += num * 2;
     }
 
