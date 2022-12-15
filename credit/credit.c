@@ -12,17 +12,17 @@ int main(void)
 
 void checkCreditCard(long number)
 {
-    int doubledSum = 0;
     int sum = 0;
     int num = number;
     int num2 = number / 10;
     int finalSum = 0;
+    int doubledSum = num2 *2;
 
     while(number){
         num = number % 10;
         sum += num;
 
-        num2 = (number / 10) % 10;
+        num2 %=  10;
         doubledSum += num2 * 2;
 
         number /= 100;
