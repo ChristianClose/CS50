@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 void checkCreditCard(long number);
-int getfirstCCSum(long number);
+int getFirstCCSum(long number);
 int getSecondCCSum(long number);
 int getNumOfDigits(long number);
-long getDivisor(long number);
-string getCCProvidor(long number, long divisor, int sum, int numOfDigits);
+long getDivisor(long number, int numOfDigits);
+string getCCProvider(long number, long divisor, int sum, int numOfDigits);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ void checkCreditCard(long number)
     long divisor = 10;
     int firstDigit;
     int firstTwoDigits;
-    string providor;
+    string provider;
 
     // while(temp)
     // {
@@ -35,8 +35,9 @@ void checkCreditCard(long number)
     sum = getFirstCCSum(number);
     sum += getSecondCCSum(number);
     numOfDigits = getNumOfDigits(number);
-    divisor = getDivisor(number);
-    providor = getCCProvidor(number, divisor, sum, numOfDigits);
+    divisor = getDivisor(number, numOfDigits);
+    provider = getCCProvider(number, divisor, sum, numOfDigits);
+    printf("%s", provider);
 
     // temp = number / 10;
 
@@ -136,7 +137,7 @@ int getNumOfDigits(long number)
 
 }
 
-long getDivisor(long number)
+long getDivisor(long number, int numOfDigits)
 {
     long divisor = 10;
 
@@ -148,33 +149,32 @@ long getDivisor(long number)
     return divisor;
 }
 
-string getCCProvidor(long number, long divisor, int sum, int numOfDigits)
+string getCCProvider(long number, long divisor, int sum, int numOfDigits)
 {
     int firstDigit = number / divisor;
     int firstTwoDigits = number / (divisor / 10);
+    string provider = "";
 
     if (sum % 10 == 0)
     {
         if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
         {
-            printf("VISA\n");
+            provider = "VISA\n";
         }
         else if ((firstTwoDigits == 34 || firstTwoDigits == 37) && numOfDigits == 15)
         {
-            printf("AMEX\n");
+            provider = "AMEX\n";
         }
         else if ((firstTwoDigits > 50 && firstTwoDigits < 56) && numOfDigits == 16)
         {
-            printf("MASTERCARD\n");
-        }
-        else
-        {
-            printf("INVALID\n");
+            provider = "MASTERCARD\n";
         }
     }
     else
     {
-        printf("INVALID\n");
+        provider = "INVALID\n";
     }
+
+    return provider;
 }
 
