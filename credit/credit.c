@@ -5,14 +5,15 @@ void checkCreditCard(long number);
 
 int main(void)
 {
-    int creditCardNum[] = get_int("Number: ");
+    long creditCardNum = get_long("Number: ");
     printf(creditCardNum);
 
 }
 
 void checkCreditCard(long number)
 {
-    int sum = number % 10;
+    int doubledSum = 0;
+    int num
 
 }
 
