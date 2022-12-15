@@ -8,12 +8,10 @@ int main(void)
 
     for(int i = 0; i < height; i++)
     {
-        for(int j = 0; j < i; j++){
-            for(int k = height; k > 0; k--){
-                printf(" ");
-            }
+        for(int j = 0; j < i; j++)
+        {
                 printf("#");
-            }
+        }
 
         printf("\n");
     }
