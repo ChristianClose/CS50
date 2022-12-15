@@ -13,9 +13,9 @@ int main(void)
 void checkCreditCard(long number)
 {
     long temp = number;
-    int sum;
+    int sum = 0;
 
-    while(number)
+    while(temp)
     {
         int lastDigit = temp % 10;
         sum += lastDigit;
@@ -24,7 +24,7 @@ void checkCreditCard(long number)
 
     temp = number / 10;
 
-    while(number){
+    while(temp){
         int lastDigit = temp % 10;
         int doubled = lastDigit * 2;
         sum += (doubled % 10) + (doubled / 10);
