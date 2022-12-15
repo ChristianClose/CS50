@@ -68,6 +68,10 @@ void checkCreditCard(long number)
             printf("INVALID\n");
         }
     }
+    else
+    {
+        printf("INVALID\n");
+    }
 
 
 
