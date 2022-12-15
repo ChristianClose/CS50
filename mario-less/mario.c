@@ -10,10 +10,12 @@ int main(void)
     {
         for(int j = 0; j < i; j++)
         {
-           printf(" ");
+           printf("#");
         }
 
-        for(int k = 0; )
+        for(int k = (i-1); k > 0; k--){
+            printf(" ");
+        }
 
         printf("\n");
     }
