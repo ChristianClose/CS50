@@ -14,17 +14,15 @@ void checkCreditCard(long number)
 {
     int doubledSum = 0;
     int sum = 0;
-    long num = ;
+    long num = number;
     int finalSum = 0;
 
-    while(number){
-        num = number / 10;
+    while(num){
+        num /= 10;
         sum += num;
 
-        num = number / 100;
+        num /= 100;
         doubledSum += num * 2;
-
-        break;
     }
 
     finalSum = sum + doubledSum;
