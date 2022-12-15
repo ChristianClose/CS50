@@ -12,7 +12,6 @@ int main(void)
 {
     long creditCardNum = get_long("Number: ");
     checkCreditCard(creditCardNum);
-
 }
 
 void checkCreditCard(long number)
@@ -73,7 +72,6 @@ int getNumOfDigits(long number)
     }
 
     return numOfDigits;
-
 }
 
 long getDivisor(long number, int numOfDigits)
