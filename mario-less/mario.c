@@ -1,12 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 char createTriangle(int base);
 
 int main(void)
 {
     char triangle[100];
-    triangle = createTriangle(8);
+    strcpy(triangle, createTriangle(8));
     printf("%s\n", triangle);
 }
 
