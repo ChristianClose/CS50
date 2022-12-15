@@ -15,6 +15,7 @@ string createTriangle(int base)
 
     for(int i = 0; i < base; i++){
         triangle += '#';
+        triangle += '\n';
         printf("%i\n", i);
         printf("%s\n", triangle);
     }
