@@ -5,7 +5,7 @@ void checkCreditCard(long number);
 
 int main(void)
 {
-    long creditCardNum = get_long("Number: ");
+    int creditCardNum[] = get_int("Number: ");
     printf(creditCardNum);
 
 }
@@ -13,6 +13,6 @@ int main(void)
 void checkCreditCard(long number)
 {
     int sum = number % 10;
-    
+
 }
 
