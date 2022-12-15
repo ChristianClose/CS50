@@ -2,25 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 
-char createTriangle(int base);
-
 int main(void)
 {
-    char triangle[100];
-    strcpy(triangle, createTriangle(8));
-    printf("%s\n", triangle);
-}
-
-char createTriangle(int base)
-{
-    char triangle[100] = "";
-
-    for(int i = 0; i < base; i++){
-        triangle += '#';
-        triangle += '\n';
-        printf("%i\n", i);
-        printf("%s\n", triangle);
+    int height = get_int("Height: ");
+    
+    for(int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < i; j++){
+            printf("#");
+        }
+        printf("\n");
     }
-
-    return triangle;
 }
+
