@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void print right
+
 int main(void)
 {
     int height;
@@ -12,7 +14,7 @@ int main(void)
 
     for(int i = 0; i < height; i++)
     {
-        for(int space = (height - 1); space > 1; space--)
+        for(int space = (height - i); space > 1; space--)
         {
             printf(" ");
         }
