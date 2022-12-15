@@ -5,7 +5,8 @@ char createTriangle(int base);
 
 int main(void)
 {
-    char triangle[100] = createTriangle(8);
+    char triangle[100];
+    triangle = createTriangle(8);
     printf("%s\n", triangle);
 }
 
