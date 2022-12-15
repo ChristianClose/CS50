@@ -15,7 +15,6 @@ int main(void)
     while (height <= 0 || height > 8);
 
     rightLeaningTriangle(height);
-    spaces(height);
     leftLeaningTriangle(height);
 
 
