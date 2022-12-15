@@ -17,20 +17,10 @@ int main(void)
 
 void checkCreditCard(long number)
 {
-    long temp = number;
     int sum = 0;
     int numOfDigits = 0;
     long divisor = 10;
-    int firstDigit;
-    int firstTwoDigits;
     string provider;
-
-    // while(temp)
-    // {
-    //     int lastDigit = temp % 10;
-    //     sum += lastDigit;
-    //     temp /= 100;
-    // }
 
     sum = getFirstCCSum(number);
     sum += getSecondCCSum(number);
@@ -38,57 +28,6 @@ void checkCreditCard(long number)
     divisor = getDivisor(number, numOfDigits);
     provider = getCCProvider(number, divisor, sum, numOfDigits);
     printf("%s", provider);
-
-    // temp = number / 10;
-
-    // while (temp)
-    // {
-    //     int lastDigit = temp % 10;
-    //     int doubled = lastDigit * 2;
-    //     sum += (doubled % 10) + (doubled / 10);
-    //     temp /= 100;
-    // }
-
-    // temp = number;
-
-    // while (temp)
-    // {
-    //     temp /= 10;
-    //     numOfDigits++;
-    // }
-
-    // for (int i = 0; i < numOfDigits - 2; i++)
-    // {
-    //     divisor *= 10;
-    // }
-
-    // firstDigit = number / divisor;
-    // firstTwoDigits = number / (divisor / 10);
-
-    // if (sum % 10 == 0)
-    // {
-    //     if (firstDigit == 4 && (numOfDigits == 13 || numOfDigits == 16))
-    //     {
-    //         printf("VISA\n");
-    //     }
-    //     else if ((firstTwoDigits == 34 || firstTwoDigits == 37) && numOfDigits == 15)
-    //     {
-    //         printf("AMEX\n");
-    //     }
-    //     else if ((firstTwoDigits > 50 && firstTwoDigits < 56) && numOfDigits == 16)
-    //     {
-    //         printf("MASTERCARD\n");
-    //     }
-    //     else
-    //     {
-    //         printf("INVALID\n");
-    //     }
-    // }
-    // else
-    // {
-    //     printf("INVALID\n");
-    // }
-
 }
 
 int getFirstCCSum(long number)
