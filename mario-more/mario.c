@@ -4,6 +4,7 @@
 void rightLeaningTriangle(int height);
 void leftLeaningTriangle(int height);
 void spaces(int height);
+void createTriangles(int height);
 
 int main(void)
 {
@@ -14,14 +15,12 @@ int main(void)
         }
     while (height <= 0 || height > 8);
 
-    rightLeaningTriangle(height);
-    leftLeaningTriangle(height);
+    createTriangles(height);
 
 
 }
 
-void rightLeaningTriangle(int height)
-{
+void createTriangles(height){
     for(int i = 0; i < height; i++)
     {
         for(int space = (height - i); space > 1; space--)
@@ -29,25 +28,31 @@ void rightLeaningTriangle(int height)
             printf(" ");
         }
 
-        for(int hashtag = 0; hashtag <= i; hashtag++)
+        for(int hashtag = 0; hashtag < i; hashtag++)
         {
             printf("#");
+
         }
 
-        printf("\n");
-    }
-}
+        printf("  ");
 
-void leftLeaningTriangle(int height)
-{
-    for (int i = 0; i < height; i++){
         for (int hashtag = 0; hashtag < i; hashtag++){
             printf("#");
         }
 
-
         printf("\n");
     }
+
+}
+
+void rightLeaningTriangle(int height)
+{
+
+}
+
+void leftLeaningTriangle(int height)
+{
+
 }
 
 void spaces(int height){
