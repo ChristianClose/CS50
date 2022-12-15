@@ -34,7 +34,7 @@ int getFirstCCSum(long number)
     long temp = number;
     int sum = 0;
 
-    while(temp)
+    while (temp)
     {
         int lastDigit = temp % 10;
         sum += lastDigit;
