@@ -23,7 +23,7 @@ int main(int argc, string argv[])
             printf("Key must contain 26 characters.\n");
             return 1;
         } else if(strcmp(isValidKey,"invalidChar") == 0){
-            printf("Invalid characters found in key.");
+            printf("Invalid characters found in key.\n");
             return 1;
         }
         else
