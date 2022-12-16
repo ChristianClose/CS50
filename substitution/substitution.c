@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     int isValidKey = validateKey(argv[1]);
 
     if(argc == 2){
-        if(isValidKey == 0){
+        if(isValidKey == 1){
             key = lowercase(argv[1]);
         }
         else if(isValidKey == -1){
@@ -25,6 +25,7 @@ int main(int argc, string argv[])
         else
         {
             printf("Duplicate characters found in key. \n");
+            return 1;
         }
 
     } else {
@@ -131,9 +132,11 @@ int validateKey(string key)
                     return 0;
                 }
             }
-        } else {
-            return -1;
         }
+    }
+    else
+    {
+        return -1;
     }
 
     return 1;
