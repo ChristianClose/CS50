@@ -11,6 +11,9 @@ int main(int argc, string argv[])
     if(argc >= 2)
     {
       key = atoi(argv[1]);
+    } else if(argv)
+    {
+        printf("Usage: ./caesar key")
     }
     printf("key: %i\n", key);
     string plainText = get_string("plaintext: ");
