@@ -23,6 +23,7 @@ int main(void)
 
 int compute_score(string word)
 {
+    char alphabet[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
     // TODO: Compute and return score for string
     for(int i = 0; i < sizeof word; i++)
     {
