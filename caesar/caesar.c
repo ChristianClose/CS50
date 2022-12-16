@@ -19,23 +19,24 @@ string encrypt(int key, string plainText)
 {
     string cipherText = "";
 
-    for(int i = 'a'; i < 'Z'; i++){
+    for(char i = 'a'; i < 'Z'; i++){
         if(i > 'z' && i < 'A'){
             i='a';
         }
 
         char letter = i + key;
+        printf("letter: %c", letter);
 
         if((letter > 'z' && letter < 'A')){
            i = 'a';
         } else if (letter > 'Z'){
-            i = "A";
+            i = 'A';
         }
 
-        string += letter;
+        cipherText += letter;
 
     }
 
-    return string;
+    return cipherText;
 }
 
