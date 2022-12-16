@@ -88,11 +88,11 @@ char *encrypt(int key, string plainText)
 
 bool only_digits(string s){
     for(int i = 0; i < strlen(s); i++){
-        if(!isdigit(s)){
+        if(!isdigit(s[i])){
             return false;
         }
 
-        return true;
     }
+    return true;
 }
 
