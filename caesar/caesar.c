@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-string encrypt(int key, string plainText);
+char encrypt(int key, string plainText);
 
 int main(int argc, string argv[])
 {
@@ -17,9 +17,13 @@ int main(int argc, string argv[])
 
 }
 
-string encrypt(int key, string plainText)
+char encrypt(int key, string plainText)
 {
-    string cipherText = "";
+
+    int plainTextSize = (int)strlen(plainText);
+    char cipherText[plainTextSize];
+    //string cipherText = "";
+    //char cipherText*;
 
     for(int i = 0; i < strlen(plainText); i++)
     {
@@ -37,8 +41,10 @@ string encrypt(int key, string plainText)
         printf("%c\n", letter);
 
 
-        cipherText += letter;
+        cipherText[i] = letter;
     }
+
+    printf("%s\n", cipherText);
 
     return cipherText;
 }
