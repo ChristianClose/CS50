@@ -5,12 +5,12 @@
 #include <ctype.h>
 
 char *encrypt(int key, string plainText);
+bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
     int key = 0;
-    printf("%s", argv[1]);
-    if(argc >= 2)
+    if(argc >= 2 && only_digits(argv[1]))
     {
         key = atoi(argv[1]);
     }
@@ -84,5 +84,15 @@ char *encrypt(int key, string plainText)
     char *cipherTextPointer = cipherText;
 
     return cipherTextPointer;
+}
+
+bool only_digits(string s){
+    for(int i = 0; i < strlen(s); i++){
+        if(!isdigit(s)){
+            return false;
+        }
+
+        return true;
+    }
 }
 
