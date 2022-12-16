@@ -13,6 +13,7 @@ int main(void)
     int numOfLetters = countLetters(text);
     int numOfWords = countWords(text);
     int numOfSentences = countSentences(text);
+    int averageLetters = 
 
     printf("%i\n", numOfLetters);
     printf("%i\n", numOfWords);
@@ -54,7 +55,7 @@ int countSentences(string text)
     for(int i = 0; i < strlen(text); i++){
         switch (text[i])
         {
-            case ',':
+            case '.':
             case '!':
             case '?':
                 count++;
