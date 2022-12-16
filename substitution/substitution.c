@@ -12,11 +12,10 @@ int validateKey(string key);
 int main(int argc, string argv[])
 {
     string key = 0;
-    int isValidKey = validateKey(argv[1]);
-    printf("%i\n", isValidKey);
 
     if(argc == 2)
     {
+        int isValidKey = validateKey(argv[1]);
         if(isValidKey == 1){
             key = lowercase(argv[1]);
         }
