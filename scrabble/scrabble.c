@@ -5,7 +5,7 @@
 
 // Points assigned to each letter of the alphabet
 const int POINTS[] =     {1,  3,  3,  2,  1,  4,  2,  4,  1,  8,  5,  1,  3,  1,  1,  3, 10,  1,  1,  1,  1,  4,  4,  8,  4, 10};
-const char ALPHABET[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+const char ALPHABET[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
 int compute_score(string word);
 string lowercase(string word);
@@ -20,14 +20,15 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    if(score1 > score2)
+    if (score1 > score2)
     {
         printf("Player 1 wins!\n");
     }
     else if (score1 < score2)
     {
         printf("Player 2 wins!\n");
-    } else
+    }
+    else
     {
         printf("Tie!\n");
     }
@@ -37,13 +38,13 @@ int compute_score(string word)
 {
     int score = 0;
     word = lowercase(word);
-    size_t alphabetLength = sizeof(ALPHABET) / sizeof (ALPHABET[0]);
+    size_t alphabetLength = sizeof(ALPHABET) / sizeof(ALPHABET[0]);
 
-    for(int i = 0; i < alphabetLength; i++)
+    for (int i = 0; i < alphabetLength; i++)
     {
         for (int j = 0; j < strlen(word); j++)
         {
-            if(word[j] == ALPHABET[i])
+            if (word[j] == ALPHABET[i])
             {
                 score += POINTS[i];
             }
@@ -53,8 +54,10 @@ int compute_score(string word)
     return score;
 }
 
-string lowercase(string word){
-    for(int i = 0; i < strlen(word); i++){
+string lowercase(string word)
+{
+    for (int i = 0; i < strlen(word); i++)
+    {
         word[i] = tolower(word[i]);
     }
 
