@@ -12,8 +12,12 @@ int main(void)
 }
 
 int countLetters(string text)
-{
+
     for(int i =0; i < strlen(text); i++){
-        if()
+        if(text)
     }
+}
+
+bool isLetter(char letter){
+    
 }
