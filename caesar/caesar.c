@@ -22,7 +22,7 @@ string encrypt(int key, string plainText)
 
     for(int i = 0; i < strlen(plainText); i++){
 
-        char letter = plainText[i+key];
+        char letter = plainText[i] + key;
 
         if(letter > 'Z' &&  letter < 'a')
         {
