@@ -15,12 +15,15 @@ int main(void)
     int numOfLetters = countLetters(text);
     int numOfWords = countWords(text);
     int numOfSentences = countSentences(text);
-    float avgNumLetters = (numOfLetters / numOfWords) * 100;
-    float avgNumSentences = (numOfSentences / numOfWords) * 100;
+    float avgNumLetters = (float)(numOfLetters / numOfWords) * 100;
+    float avgNumSentences = (float)(numOfSentences / numOfWords) * 100;
     float gradeLevel = 0.0588 * avgNumLetters - 0.296 * avgNumSentences - 15.8;
 
-    printf("%f\n", avgNumLetters);
-    printf("%f\n", avgNumSentences);
+    printf("Avg Num Letters: %f\n", avgNumLetters);
+    printf("Avg Num Senteces: %f\n", avgNumSentences);
+    printf("Num of Letters: %i\n", numOfLetters);
+    printf("Num of Words: %i\n", numOfWords);
+    printf("Num of Sentences: %i\n", numOfSentences);
     printf("Grade Level: %f\n", gradeLevel);
 }
 
