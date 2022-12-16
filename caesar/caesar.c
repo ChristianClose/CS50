@@ -13,6 +13,7 @@ int main(int argc, string argv[])
 
 string encrypt(int key, string plainText)
 {
+    int alphabetStart = 95
     for(int i = )
 }
 
