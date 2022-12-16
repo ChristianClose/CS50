@@ -81,16 +81,15 @@ char *encrypt(int key, string plainText)
 
         }
 
-        printf("");
-
         cipherText[i] = letter;
     }
 
     //Terminate String
     cipherText[plainTextSize] = '\0';
 
-    //Only way to pass an array is as a pointer
-    char *cipherTextPointer = strdup(cipherText);
+    //Creaate a Pointer and allocate the size of cipherText +1 for null terminator
+    char *cipherTextPointer = (char *)malloc(strlen(cipherText)+1);
+    strcpy(cipherTextPointer, cipherText);
 
     return cipherTextPointer;
 }
