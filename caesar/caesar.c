@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     char* cipherText = cipherText = encrypt(key, plainText);
 
     printf("plaintext: %s\n", plainText);
-    printf("ciphertext: %s\n", cipherText);
+    printf("ciphertext: %p\n", cipherText);
 
 }
 
