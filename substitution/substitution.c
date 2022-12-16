@@ -3,22 +3,28 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <stdbool.h>
 
 char *encrypt(string key, string plaintext);
 char *getAlphabet(string caseType);
 char *lowercase(string word);
-bool validateKey(string key);
+int validateKey(string key);
 
 int main(int argc, string argv[])
 {
     string key = 0;
+    int isValidKey = validateKey(argv[1]);
+
     if(argc == 2){
-        if(validateKey(argv[1])){
+        if(isValidKey) == 0){
             key = lowercase(argv[1]);
-        } else {
+        }
+        else if(isValidKey == -1){
             printf("Key must contain 26 characters.\n");
             return 1;
+        }
+        else
+        {
+            printf("")
         }
 
     } else {
@@ -111,7 +117,8 @@ char *lowercase(string word)
     return lowercaseWord;
 }
 
-bool validateKey(string key)
+//Returns 0 if invalid, returns -1 if incorrect length and returns 1 if valid
+int validateKey(string key)
 {
     if(strlen(key) == 26)
     {
@@ -121,11 +128,13 @@ bool validateKey(string key)
             for(int j = 1; j < strlen(key) - 1; j++)
             {
                 if(key[i] == key[j]){
-                    return false;
+                    return 0;
                 }
             }
+        } else {
+            return -1
         }
     }
 
-    return true;
+    return 1;
 }
