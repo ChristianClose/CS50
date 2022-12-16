@@ -20,9 +20,6 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    printf("score1: %i\n", score1);
-    printf("score2: %i\n", score2);
-
     if(score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -48,7 +45,6 @@ int compute_score(string word)
             if(word[i] == ALPHABET[j])
             {
                 score += POINTS[j];
-                printf("POINT: %i\n", POINTS[j]);
             }
         }
     }
