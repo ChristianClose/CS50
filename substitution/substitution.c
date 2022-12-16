@@ -13,16 +13,20 @@ int main(int argc, string argv[])
 {
     string key = 0;
 
-    if(argc == 2)
+    if (argc == 2)
     {
         string isValidKey = validateKey(argv[1]);
-        if(strcmp(isValidKey,"OK") == 0){
+        if (strcmp(isValidKey, "OK") == 0)
+        {
             key = lowercase(argv[1]);
         }
-        else if(strcmp(isValidKey,"lengthError") == 0){
+        else if (strcmp(isValidKey, "lengthError") == 0)
+        {
             printf("Key must contain 26 characters.\n");
             return 1;
-        } else if(strcmp(isValidKey,"invalidChar") == 0){
+        }
+        else if (strcmp(isValidKey, "invalidChar") == 0)
+        {
             printf("Invalid characters found in key.\n");
             return 1;
         }
@@ -32,7 +36,9 @@ int main(int argc, string argv[])
             return 1;
         }
 
-    } else {
+    }
+    else
+    {
         printf("Usage: ./substitution key\n");
         return 1;
     }
@@ -47,12 +53,13 @@ char *encrypt(string key, string plaintext)
 {
     char *alphabetLower = getAlphabet("lower");
     char *alphabetUpper = getAlphabet("upper");
-    char *ciphertext = (char*) malloc(strlen(plaintext) * sizeof(char));
+    char *ciphertext = (char *) malloc(strlen(plaintext) * sizeof(char));
 
-    for(int i = 0; i < strlen(plaintext); i++)
+    for (int i = 0; i < strlen(plaintext); i++)
     {
-        if(islower(plaintext[i]) > 0){
-            for(int j = 0; j < strlen(alphabetLower); j++)
+        if (islower(plaintext[i]) > 0)
+        {
+            for (int j = 0; j < strlen(alphabetLower); j++)
             {
                 if (plaintext[i] == alphabetLower[j])
                 {
@@ -62,11 +69,12 @@ char *encrypt(string key, string plaintext)
                 }
             }
         }
-        else if(isupper(plaintext[i]) > 0)
+        else if (isupper(plaintext[i]) > 0)
         {
             for (int j = 0; j < strlen(alphabetUpper); j++)
             {
-                if(plaintext[i] == alphabetUpper[j]){
+                if (plaintext[i] == alphabetUpper[j])
+                {
 
                     ciphertext[i] = toupper(key[j]);
                     continue;
@@ -87,12 +95,12 @@ char *encrypt(string key, string plaintext)
 char *getAlphabet(string caseType)
 {
     int alphabetSize = 27;
-    char *alphabet = (char*) malloc(alphabetSize * sizeof(char));
+    char *alphabet = (char *) malloc(alphabetSize * sizeof(char));
     int count = 0;
 
-    if(strcmp(caseType, "lower") == 0)
+    if (strcmp(caseType, "lower") == 0)
     {
-        for(char i = 'a'; i <= 'z'; i++)
+        for (char i = 'a'; i <= 'z'; i++)
         {
             alphabet[count] = i;
             count++;
@@ -100,7 +108,7 @@ char *getAlphabet(string caseType)
     }
     else
     {
-        for(char i = 'A'; i <= 'Z'; i++ )
+        for (char i = 'A'; i <= 'Z'; i++)
         {
             alphabet[count] = i;
             count++;
@@ -113,8 +121,8 @@ char *getAlphabet(string caseType)
 
 char *lowercase(string word)
 {
-    string lowercaseWord = (char*) malloc(strlen(word) * sizeof(char));
-    for(int i = 0; i < strlen(word); i++)
+    string lowercaseWord = (char *) malloc(strlen(word) * sizeof(char));
+    for (int i = 0; i < strlen(word); i++)
     {
         lowercaseWord[i] = tolower(word[i]);
     }
@@ -122,34 +130,32 @@ char *lowercase(string word)
     return lowercaseWord;
 }
 
-//Returns 0 if dulicate,
-//returns -1 if incorrect length
-//returns -2 if invalid character
-//returns 1 if valid
 string validateKey(string key)
 {
     printf("%lu\n", strlen(key));
-    if(strlen(key) == 26)
+    if (strlen(key) == 26)
     {
-       for(int i = 0; i< strlen(key); i++)
-       {
-            for(int j = 1; j < strlen(key); j++)
+        for (int i = 0; i < strlen(key); i++)
+        {
+            for (int j = 1; j < strlen(key); j++)
             {
-                if(j == i){
+                if (j == i)
+                {
                     continue;
                 }
 
-                if(key[i] == key[j]){
+                if (key[i] == key[j])
+                {
                     return "duplicateError";
                 }
 
                 //check if character is not in the alphabet
-                if((key[j] > 'Z' && key[j] < 'a') || key[j] > 'z' || key[j] < 'A')
+                if ((key[j] > 'Z' && key[j] < 'a') || key[j] > 'z' || key[j] < 'A')
                 {
                     return "invalidChar";
                 }
             }
-    }
+        }
     }
     else
     {
