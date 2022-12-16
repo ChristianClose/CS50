@@ -134,6 +134,9 @@ string validateKey(string key)
        int count = 0;
         for(int j = 1; j < strlen(key); j++)
         {
+            printf("%c\n", key[count]);
+            printf("%c\n\n", key[j]);
+
             if(key[count] == key[j]){
                 return "duplicateError";
             }
