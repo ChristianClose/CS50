@@ -49,7 +49,7 @@ char* encrypt(int key, string plainText)
     }
 
     printf("%s\n", cipherText);
-
-    return cipherText;
+    char *finalCipherText = cipherText;
+    return finalCipherText;
 }
 
