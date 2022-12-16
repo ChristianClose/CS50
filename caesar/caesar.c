@@ -29,7 +29,7 @@ char *encrypt(int key, string plainText)
 
     for(int i = 0; i < strlen(plainText); i++)
     {
-        char letter;
+        int letter;
         if(plainText[i] >= 'A' && plainText[i] <= 'z'){
             letter = plainText[i] + key;
         } else {
