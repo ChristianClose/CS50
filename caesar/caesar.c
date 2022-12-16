@@ -36,12 +36,16 @@ char *encrypt(int key, string plainText)
         {
             letter = 'A' + (letter - 'Z');
         }
-        
-        if(letter > 'z'){
+
+        if(letter > 'z')
+        {
             letter = 'a' + (letter - 'z');
         }
 
-        cipherText[i] = letter;
+        if(letter >= 'A'){
+            cipherText[i] = letter;
+        }
+
     }
 
     char *cipherTextPointer = cipherText;
