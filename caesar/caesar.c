@@ -48,7 +48,7 @@ char *encrypt(int key, string plainText)
         }
 
         printf("Letter: %c\n", letter);
-        printf("plainText[i]: %c\n", plainText[i]);
+       // printf("plainText[i]: %c\n", plainText[i]);
 
 
          cipherText[i] = letter;
