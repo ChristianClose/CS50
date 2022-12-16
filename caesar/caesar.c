@@ -21,7 +21,8 @@ string encrypt(int key, string plainText)
 {
     string cipherText = "";
 
-    for(int i = 0; i < strlen(plainText); i++){
+    for(int i = 0; i < strlen(plainText); i++)
+    {
 
         char letter = plainText[i] + key;
 
