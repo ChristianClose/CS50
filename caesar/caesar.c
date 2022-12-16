@@ -29,8 +29,10 @@ char *encrypt(int key, string plainText)
 
     for(int i = 0; i < strlen(plainText); i++)
     {
-
-        char letter = plainText[i] + key;
+        char letter;
+        if(plainText[i] >= 'A' && plainText[i] <= 'z'){
+            letter = plainText[i] + key;
+        }
 
         if(letter > 'Z' &&  letter < 'a')
         {
@@ -42,9 +44,7 @@ char *encrypt(int key, string plainText)
             letter = 'a' + (letter - 'z');
         }
 
-        if(letter >= 'A'){
-            cipherText[i] = letter;
-        }
+         cipherText[i] = letter;
 
     }
 
