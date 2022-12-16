@@ -7,6 +7,7 @@
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int compute_score(string word);
+string lowercase(string word);
 
 int main(void)
 {
@@ -19,18 +20,35 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+
+    printf("%i\n", score1);
 }
 
 int compute_score(string word)
 {
-    word.
-    char alphabet[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
+    int score = 0;
+    word = lowercase(word);
+
+    char alphabet[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     // TODO: Compute and return score for string
-    for(int i = 0; i < sizeof alphabet; i++)
+    for(int i = 0; i < sizeof word; i++)
     {
-        for (int j = 0; j < sizeof word; j++)
+        for (int j = 0; j < sizeof alphabet; j++)
         {
-            if(word[j] ==
+            if(word[i] == alphabet[j])
+            {
+                score += POINTS[j];
+            }
         }
     }
+
+    return score;
+}
+
+string lowercase(string word){
+    for(int i = 0; i < sizeof word; i++){
+        word[i] = tolower(word[i]);
+    }
+
+    return word;
 }
