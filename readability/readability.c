@@ -18,13 +18,8 @@ int main(void)
     float avgNumSentences = ((float)numOfSentences / numOfWords) * 100;
     int gradeLevel = round(0.0588 * avgNumLetters - 0.296 * avgNumSentences - 15.8);
 
-    // printf("Avg Num Letters: %f\n", avgNumLetters);
-    // printf("Avg Num Senteces: %f\n", avgNumSentences);
-    // printf("Num of Letters: %i\n", numOfLetters);
-    // printf("Num of Words: %i\n", numOfWords);
-    // printf("Num of Sentences: %i\n", numOfSentences);
 
-    if(gradeLevel < 1)
+    if (gradeLevel < 1)
     {
         printf("Before Grade 1\n");
     }
@@ -42,8 +37,10 @@ int countLetters(string text)
 {
     int count = 0;
 
-    for(int i = 0; i < strlen(text); i++){
-        if(isLetter(text[i])){
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if (isLetter(text[i]))
+        {
             count++;
         }
     }
@@ -55,8 +52,10 @@ int countWords(string text)
 {
     int count = 1;
 
-    for(int i = 0; i < strlen(text); i++){
-        if (text[i] == ' '){
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if (text[i] == ' ')
+        {
             count++;
         }
     }
@@ -68,7 +67,8 @@ int countSentences(string text)
 {
     int count = 0;
 
-    for(int i = 0; i < strlen(text); i++){
+    for (int i = 0; i < strlen(text); i++)
+    {
         switch (text[i])
         {
             case '.':
@@ -82,22 +82,27 @@ int countSentences(string text)
     return count;
 }
 
-bool isLetter(char letter){
+bool isLetter(char letter)
+{
     const int CAPITAL_LOWER_NUM = 65;
     const int CAPITAL_UPPER_NUM = 90;
     const int LOWERCASE_LOWER_NUM = 97;
     const int LOWERCASE_UPPER_NUM = 122;
 
     //Check if uppercase
-    for(int i = CAPITAL_LOWER_NUM; i <= CAPITAL_UPPER_NUM; i++){
-        if (letter == i){
+    for (int i = CAPITAL_LOWER_NUM; i <= CAPITAL_UPPER_NUM; i++)
+    {
+        if (letter == i)
+        {
             return true;
         }
     }
 
     //Check if lowercase
-    for(int i = LOWERCASE_LOWER_NUM; i <= LOWERCASE_UPPER_NUM; i++){
-        if(letter == i){
+    for (int i = LOWERCASE_LOWER_NUM; i <= LOWERCASE_UPPER_NUM; i++)
+    {
+        if (letter == i)
+        {
             return true;
         }
     }
