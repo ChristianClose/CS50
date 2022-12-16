@@ -3,14 +3,17 @@
 #include <string.h>
 
 int countLetters(string text);
+int countWords(string text);
 bool isLetter(char letter);
 
 int main(void)
 {
     string text = get_string("Text: \n");
     int numOfLetters = countLetters(text);
+    int numOfWords = countWords(text);
 
     printf("%i\n", numOfLetters);
+    printf("%i\n", numOfWords);
 
 
 }
@@ -19,8 +22,21 @@ int countLetters(string text)
 {
     int count = 0;
 
-    for(int i =0; i < strlen(text); i++){
+    for(int i = 0; i < strlen(text); i++){
         if(isLetter(text[i])){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+int countWords(string text)
+{
+    int count = 1;
+
+    for(int i = 0; i < strlen(text); i++){
+        if (text[i] == ' '){
             count++;
         }
     }
@@ -41,6 +57,7 @@ bool isLetter(char letter){
         }
     }
 
+    //Check if lowercase
     for(int i = LOWERCASE_LOWER_NUM; i < LOWERCASE_UPPER_NUM; i++){
         if(letter == i){
             return true;
