@@ -88,7 +88,7 @@ char *encrypt(int key, string plainText)
     cipherText[plainTextSize] = '\0';
 
     //Creaate a Pointer and allocate the size of cipherText +1 for null terminator
-    char *cipherTextPointer = (char *)malloc(strlen(cipherText)+1);
+    char *cipherTextPointer = (char *)malloc(strlen(cipherText) + 1);
     strcpy(cipherTextPointer, cipherText);
 
     return cipherTextPointer;
