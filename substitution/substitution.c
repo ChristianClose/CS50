@@ -128,6 +128,7 @@ char *lowercase(string word)
 //returns 1 if valid
 string validateKey(string key)
 {
+    printf("%lu\n", strlen(key));
     if(strlen(key) == 26)
     {
        int count = 0;
