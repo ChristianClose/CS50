@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     char* cipherText = cipherText = encrypt(key, plainText);
 
     printf("plaintext: %s\n", plainText);
-    printf("ciphertext: %p\n", cipherText);
+    printf("ciphertext: %s\n", cipherText);
 
 }
 
@@ -38,13 +38,13 @@ char *encrypt(int key, string plainText)
 
         if(letter > 'Z' &&  letter < 'a')
         {
-            letter = 'A' + (letter - 'Z');
+            letter = 'A' + (letter - 'Z') - 1;
         }
 
         if(letter > 'z')
         {
             printf("Hello \n");
-            letter = 'a' + (letter - 'z');
+            letter = 'a' + (letter - 'z') - 1;
         }
 
         printf("plainText Letter value: %d\n", plainText[i]);
@@ -56,10 +56,12 @@ char *encrypt(int key, string plainText)
 
 
          cipherText[i] = letter;
-
     }
 
+    cipherText[plainTextSize] = '\0';
+
     char *cipherTextPointer = cipherText;
+
     return cipherTextPointer;
 }
 
