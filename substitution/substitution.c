@@ -3,10 +3,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 char *encrypt(string key, string plaintext);
 char *getAlphabet(string caseType);
 char *lowercase(string word);
+bool validateKey(string key);
 
 int main(int argc, string argv[])
 {
@@ -107,4 +109,15 @@ char *lowercase(string word)
     }
 
     return lowercaseWord;
+}
+
+bool validateKey(string key)
+{
+    if(strlen(key) == 26)
+    {
+        for(int i = 0; i < strlen(key); i++)
+        {
+            
+        }
+    }
 }
