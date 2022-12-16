@@ -44,7 +44,7 @@ int compute_score(string word)
         {
             if(word[i] == ALPHABET[j])
             {
-                score += POINTS[j];
+                score += POINTS[i];
             }
         }
     }
