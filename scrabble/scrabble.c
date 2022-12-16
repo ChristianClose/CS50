@@ -39,14 +39,11 @@ int compute_score(string word)
     word = lowercase(word);
     size_t alphabetLength = sizeof(ALPHABET) / sizeof (ALPHABET[0]);
 
-    printf("%lu\n", alphabetLength);
-    printf("%lu\n", strlen(word));
-
-    for(int i = 0; i < strlen(word); i++)
+    for(int i = 0; i < alphabetLength; i++)
     {
-        for (int j = 0; j < alphabetLength; j++)
+        for (int j = 0; j < strlen(word); j++)
         {
-            if(word[i] == ALPHABET[j])
+            if(word[j] == ALPHABET[i])
             {
                 score += POINTS[i];
             }
