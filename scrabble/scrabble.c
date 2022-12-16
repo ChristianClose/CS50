@@ -50,6 +50,7 @@ int compute_score(string word)
             if(word[j] == ALPHABET[i])
             {
                 score += POINTS[i];
+                printf("POINT: %i\n", POINTS[i]);
             }
         }
     }
