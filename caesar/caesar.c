@@ -43,6 +43,7 @@ char *encrypt(int key, string plainText)
 
         if(letter > 'z')
         {
+            printf("Hello \n");
             letter = 'a' + (letter - 'z');
         }
 
