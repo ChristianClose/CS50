@@ -6,7 +6,6 @@
 int countLetters(string text);
 int countWords(string text);
 int countSentences(string text);
-int averageLetters(string text);
 bool isLetter(char letter);
 
 int main(void)
