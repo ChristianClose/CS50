@@ -23,13 +23,14 @@ int main(void)
 
 int compute_score(string word)
 {
+    word.
     char alphabet[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
     // TODO: Compute and return score for string
-    for(int i = 0; i < sizeof word; i++)
+    for(int i = 0; i < sizeof alphabet; i++)
     {
-        for (int j = 0; j < sizeof POINTS; j++)
+        for (int j = 0; j < sizeof word; j++)
         {
-            if()
+            if(word[j] ==
         }
     }
 }
