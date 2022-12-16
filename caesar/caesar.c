@@ -17,7 +17,7 @@ string encrypt(int key, string plainText)
 
     for(int i = 'a'; i < 'Z'; i++){
         if(i > 'z' && i < 'A'){
-            i='A';
+            i='a';
         }
 
         char letter = i + key;
