@@ -21,6 +21,9 @@ int main(int argc, string argv[])
         else if(isValidKey == -1){
             printf("Key must contain 26 characters.\n");
             return 1;
+        } else if(isValidKey == -2){
+            printf("Invalid characters found in key.");
+            return 1;
         }
         else
         {
@@ -118,18 +121,26 @@ char *lowercase(string word)
     return lowercaseWord;
 }
 
-//Returns 0 if invalid, returns -1 if incorrect length and returns 1 if valid
+//Returns 0 if dulicate,
+//returns -1 if incorrect length
+//returns -2 if invalid character
+//returns 1 if valid
 int validateKey(string key)
 {
     if(strlen(key) == 26)
     {
-        int duplicates = 0;
         for(int i = 0; i < strlen(key); i++)
         {
             for(int j = 1; j < strlen(key) - 1; j++)
             {
                 if(key[i] == key[j]){
                     return 0;
+                }
+
+                //check if character is not in the alphabet
+                if((key[i] > 'Z' && key[i] < 'a') || key[i] > 'z' || key[i] < 'A')
+                {
+                    return -2;
                 }
             }
         }
