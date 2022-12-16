@@ -8,14 +8,19 @@ char *encrypt(int key, string plainText);
 
 int main(int argc, string argv[])
 {
-    int key = 0;
-    if(argc >= 2)
-    {
-      key = atoi(argv[1]);
-    } else if(!isdigit(argv[1]))
-    {
-        printf("Usage: ./caesar key")
+    int key = atoi(argv[1]);
+
+    if(key <= 0){
+        printf("USAGE: ./caesar key");
+        return 0;
     }
+
+    if(argc < 2 || argc > 2){
+        printf("USAGE: ./caesay key");
+        return 0;
+    }
+
+
     printf("key: %i\n", key);
     string plainText = get_string("plaintext: ");
     char* cipherText = cipherText = encrypt(key, plainText);
