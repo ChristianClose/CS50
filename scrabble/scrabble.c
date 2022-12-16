@@ -43,13 +43,13 @@ int compute_score(string word)
     word = lowercase(word);
 
     // TODO: Compute and return score for string
-    for(int i = 0; i < sizeof word; i++)
+    for(int i = 0; i < sizeof ALPHABET; i++)
     {
-        for (int j = 0; j < sizeof ALPHABET; j++)
+        for (int j = 0; j < sizeof word; j++)
         {
-            if(word[i] == ALPHABET[j])
+            if(word[j] == ALPHABET[i])
             {
-                score += POINTS[j];
+                score += POINTS[i];
             }
         }
     }
