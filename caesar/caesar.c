@@ -31,10 +31,6 @@ int main(int argc, string argv[])
 
     string plainText = get_string("plaintext: ");
     char *cipherText = cipherText = encrypt(key, plainText);
-
-    printf("ciphertext: %s\n", cipherText);
-    printf("key: %i\n", key);
-
 }
 
 char *encrypt(int key, string plainText)
