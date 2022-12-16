@@ -130,23 +130,22 @@ int validateKey(string key)
 {
     if(strlen(key) == 26)
     {
-        for(int i = 0; i < strlen(key); i++)
+       int count = 0;
+        for(int j = 1; j < strlen(key) - 1; j++)
         {
-            for(int j = 1; j < strlen(key) - 1; j++)
-            {
-                printf("%c \n", key[i]);
-                printf("%c \n\n", key[j]);
-                
-                if(key[i] == key[j]){
-                    return 0;
-                }
+            printf("%c \n", key[count]);
+            printf("%c \n\n", key[j]);
 
-                //check if character is not in the alphabet
-                if((key[i] > 'Z' && key[i] < 'a') || key[i] > 'z' || key[i] < 'A')
-                {
-                    return -2;
-                }
+            if(key[count] == key[j]){
+                return 0;
             }
+
+            //check if character is not in the alphabet
+            if((key[j] > 'Z' && key[j] < 'a') || key[j] > 'z' || key[j] < 'A')
+            {
+                return -2;
+            }
+            count++;
         }
     }
     else
