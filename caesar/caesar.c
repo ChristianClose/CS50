@@ -32,6 +32,8 @@ char *encrypt(int key, string plainText)
         char letter;
         if(plainText[i] >= 'A' && plainText[i] <= 'z'){
             letter = plainText[i] + key;
+        } else {
+            letter = plainText[i];
         }
 
         if(letter > 'Z' &&  letter < 'a')
