@@ -8,7 +8,11 @@ char *encrypt(int key, string plainText);
 
 int main(int argc, string argv[])
 {
-    int key = atoi(argv[1]);
+    int key = 0;
+    if(argc >= 2){
+        key = atoi(argv[1]);
+    }
+
 
     if(key <= 0){
         printf("USAGE: ./caesar key");
