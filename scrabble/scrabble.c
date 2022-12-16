@@ -43,6 +43,7 @@ int compute_score(string word)
     word = lowercase(word);
 
     printf("%s\n", word);
+    printf("%ul\n", sizeof word);
 
     // TODO: Compute and return score for string
     for(int i = 0; i < sizeof word; i++)
