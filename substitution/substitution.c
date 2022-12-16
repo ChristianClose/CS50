@@ -3,12 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+char *encrypt(string key, string plaintext);
+
 int main(int argc, string argv[])
 {
-    int key = 0;
+    string key = 0;
     if(argc == 2){
         if(strlen(argv[1]) == 26){
-            key = atoi(argv[1]);
+            key = argv[1];
         } else {
             printf("Key must contain 26 characters.\n");
         }
@@ -17,5 +19,10 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
     }
 
+    string plaintext = get_string("plaintext: ");
+}
+
+char *encrypt(string key, string plaintext)
+{
 
 }
