@@ -36,7 +36,8 @@ char *encrypt(int key, string plainText)
         {
             letter = 'A' + (letter - 'Z');
         }
-        else if(letter > 'z'){
+        
+        if(letter > 'z'){
             letter = 'a' + (letter - 'z');
         }
 
