@@ -53,7 +53,7 @@ int compute_score(string word)
 }
 
 string lowercase(string word){
-    for(int i = 0; i < sizeof word; i++){
+    for(int i = 0; i < strlen(word); i++){
         word[i] = tolower(word[i]);
     }
 
