@@ -90,7 +90,7 @@ char *encrypt(int key, string plainText)
     cipherText[plainTextSize] = '\0';
 
     //Only way to pass an array is as a pointer
-    char *cipherTextPointer = strlcpy(cipher);
+    char *cipherTextPointer = strdup(cipherText);
 
     return cipherTextPointer;
 }
