@@ -40,7 +40,7 @@ int compute_score(string word)
 
     for(int i = 0; i < strlen(word); i++)
     {
-        for (int j = 0; j < sizeof ALPHABET; j++)
+        for (int j = 0; j < (sizeof ALPHABET / sizeof(ALPHABET[0]); j++)
         {
             if(word[i] == ALPHABET[j])
             {
