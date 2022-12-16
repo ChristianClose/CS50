@@ -21,7 +21,7 @@ char* encrypt(int key, string plainText)
 {
 
     int plainTextSize = (int)strlen(plainText);
-    char* cipherText[plainTextSize];
+    char cipherText[plainTextSize];
     //string cipherText = "";
     //char cipherText*;
 
