@@ -20,6 +20,11 @@ string encrypt(int key, string plainText)
     string cipherText = "";
 
     for(int i = 'A'; i < 'z'; i++){
+        for(int j = 0; j < strlen(plainText); j++)
+        {
+            
+        }
+
         if(i > 'Z' && i < 'a'){
             i='A';
         }
@@ -28,10 +33,11 @@ string encrypt(int key, string plainText)
         printf("letter: %c\n", letter);
 
         if((letter > 'Z' && letter < 'a')){
-           i = 'A';
+        i = 'A';
         } else if (letter > 'z'){
             i = 'a';
         }
+
 
         cipherText += letter;
 
