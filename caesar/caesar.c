@@ -10,8 +10,8 @@ int main(int argc, string argv[])
     string plainText = get_string("plaintext: ");
     string cipherText = encrypt(key, plainText);
 
-    fprint("plaintext: %s\n", plainText);
-    fprint("ciphertext: %s\n", cipherText);
+    printf("plaintext: %s\n", plainText);
+    printf("ciphertext: %s\n", cipherText);
 
 }
 
@@ -35,5 +35,7 @@ string encrypt(int key, string plainText)
         string += letter;
 
     }
+
+    return string;
 }
 
