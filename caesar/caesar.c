@@ -17,13 +17,13 @@ int main(int argc, string argv[])
     if(key <= 0)
     {
         printf("USAGE: ./caesar key \n");
-        return -1;
+        return 1;
     }
 
     if(argc < 2 || argc > 2)
     {
         printf("USAGE: ./caesar key \n");
-        return -1;
+        return 1;
     }
 
     string plainText = get_string("plaintext: ");
