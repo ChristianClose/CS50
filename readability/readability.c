@@ -4,6 +4,7 @@
 
 int countLetters(string text);
 int countWords(string text);
+int countSentences(string text);
 bool isLetter(char letter);
 
 int main(void)
@@ -11,9 +12,11 @@ int main(void)
     string text = get_string("Text: \n");
     int numOfLetters = countLetters(text);
     int numOfWords = countWords(text);
+    int numOfSentences = countSentences(text);
 
     printf("%i\n", numOfLetters);
     printf("%i\n", numOfWords);
+    printf("%i\n", numOfSentences);
 
 
 }
@@ -38,6 +41,24 @@ int countWords(string text)
     for(int i = 0; i < strlen(text); i++){
         if (text[i] == ' '){
             count++;
+        }
+    }
+
+    return count;
+}
+
+int countSentences(string text)
+{
+    int count = 0;
+
+    for(int i = 0; i < strlen(text); i++){
+        switch (text[i])
+        {
+            case ',':
+            case '!':
+            case '?':
+                count++;
+                break;
         }
     }
 
