@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 char *encrypt(int key, string plainText);
 
@@ -11,7 +12,7 @@ int main(int argc, string argv[])
     if(argc >= 2)
     {
       key = atoi(argv[1]);
-    } else if(argv)
+    } else if(!isdigit(argv[1]))
     {
         printf("Usage: ./caesar key")
     }
