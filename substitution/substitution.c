@@ -15,7 +15,8 @@ int main(int argc, string argv[])
     int isValidKey = validateKey(argv[1]);
     printf("%i\n", isValidKey);
 
-    if(argc == 2){
+    if(argc == 2)
+    {
         if(isValidKey == 1){
             key = lowercase(argv[1]);
         }
@@ -131,11 +132,8 @@ int validateKey(string key)
     if(strlen(key) == 26)
     {
        int count = 0;
-        for(int j = 1; j < strlen(key) - 1; j++)
+        for(int j = 1; j < strlen(key); j++)
         {
-            printf("%c \n", key[count]);
-            printf("%c \n\n", key[j]);
-
             if(key[count] == key[j]){
                 return 0;
             }
