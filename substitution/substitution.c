@@ -7,7 +7,7 @@
 char *encrypt(string key, string plaintext);
 char *getAlphabet(string caseType);
 char *lowercase(string word);
-int validateKey(string key);
+string validateKey(string key);
 
 int main(int argc, string argv[])
 {
@@ -15,14 +15,14 @@ int main(int argc, string argv[])
 
     if(argc == 2)
     {
-        int isValidKey = validateKey(argv[1]);
-        if(isValidKey == 1){
+        string isValidKey = validateKey(argv[1]);
+        if(strcmp(isValidKey,"OK") == 0){
             key = lowercase(argv[1]);
         }
-        else if(isValidKey == -1){
+        else if(strcmp(isValidKey,"lengthError") == 0){
             printf("Key must contain 26 characters.\n");
             return 1;
-        } else if(isValidKey == -2){
+        } else if(strcmp(isValidKey,"invalidChar") == 0){
             printf("Invalid characters found in key.");
             return 1;
         }
@@ -126,7 +126,7 @@ char *lowercase(string word)
 //returns -1 if incorrect length
 //returns -2 if invalid character
 //returns 1 if valid
-int validateKey(string key)
+string validateKey(string key)
 {
     if(strlen(key) == 26)
     {
@@ -134,21 +134,21 @@ int validateKey(string key)
         for(int j = 1; j < strlen(key); j++)
         {
             if(key[count] == key[j]){
-                return 0;
+                return "duplicateError";
             }
 
             //check if character is not in the alphabet
             if((key[j] > 'Z' && key[j] < 'a') || key[j] > 'z' || key[j] < 'A')
             {
-                return -2;
+                return "invalidChar";
             }
             count++;
         }
     }
     else
     {
-        return -1;
+        return "lengthError";
     }
 
-    return 1;
+    return "OK";
 }
