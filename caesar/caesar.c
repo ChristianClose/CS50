@@ -55,6 +55,7 @@ char *encrypt(int key, string plainText)
             letter = plainText[i];
         }
 
+
         //If the letter is greater than capital 'Z', and less than 'a'
         //then the orginal letter must have been Uppercase
         //Therefore, set the letter to the first letter of the alphabet ('A')
@@ -79,6 +80,8 @@ char *encrypt(int key, string plainText)
             }
 
         }
+
+        //printf("letter: %c\n", letter);
 
         cipherText[i] = letter;
     }
