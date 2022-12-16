@@ -25,7 +25,7 @@ char *encrypt(int key, string plainText)
 {
 
     int plainTextSize = (int)strlen(plainText);
-    char cipherText[plainTextSize];
+    char cipherText[plainTextSize+1];
 
     for(int i = 0; i < strlen(plainText); i++)
     {
@@ -59,7 +59,7 @@ char *encrypt(int key, string plainText)
 
     }
 
-    char *cipherTextPointer = cipherText + "\0";
+    char *cipherTextPointer = cipherText;
     return cipherTextPointer;
 }
 
