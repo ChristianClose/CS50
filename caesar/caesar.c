@@ -13,8 +13,21 @@ int main(int argc, string argv[])
 
 string encrypt(int key, string plainText)
 {
+    string cipherText = "";
+
     for(int i = 'a'; i < 'Z'; i++){
-        if()
+        if(i > 'z' && i < 'A'){
+            i='A';
+        }
+
+        char letter = i + key;
+
+        if((letter > 'z' && letter < 'A')){
+           i = 'a';
+        } else if (letter > 'Z'){
+            i = "A";
+        }
+
     }
 }
 
