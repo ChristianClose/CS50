@@ -47,6 +47,8 @@ char *encrypt(int key, string plainText)
             letter = 'a' + (letter - 'z');
         }
 
+        printf("Letter Value: %d\n", letter);
+
         printf("Letter: %c\n\n", letter);
        // printf("plainText[i]: %c\n", plainText[i]);
 
