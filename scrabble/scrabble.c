@@ -37,10 +37,10 @@ int compute_score(string word)
 {
     int score = 0;
     word = lowercase(word);
-    size_t alphabetLength = sizeof ALPHABET / sizeof ALPHABET[0] ;
+    size_t alphabetLength = sizeof(ALPHABET) / sizeof (ALPHABET[0]);
 
     printf("%lu\n", alphabetLength);
-    printf("%lu\n", sizeof ALPHABET);
+    printf("%lu\n", sizeof(ALPHABET));
 
     for(int i = 0; i < strlen(word); i++)
     {
