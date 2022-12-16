@@ -30,6 +30,7 @@ int main(int argc, string argv[])
     char* cipherText = cipherText = encrypt(key, plainText);
 
     printf("ciphertext: %s\n", cipherText);
+    printf("key: %i\n", key);
 
 }
 
