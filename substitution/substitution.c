@@ -14,7 +14,7 @@ int main(int argc, string argv[])
 {
     string key = 0;
     if(argc == 2){
-        if(strlen(argv[1]) == 26){
+        if(validateKey(argv[1])){
             key = lowercase(argv[1]);
         } else {
             printf("Key must contain 26 characters.\n");
@@ -118,7 +118,14 @@ bool validateKey(string key)
         int duplicates = 0;
         for(int i = 0; i < strlen(key); i++)
         {
-
+            for(int j = 1; j < strlen(key) - 1; j++)
+            {
+                if(key[i] == key[j]){
+                    return false;
+                }
+            }
         }
     }
+
+    return true;
 }
