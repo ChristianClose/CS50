@@ -45,14 +45,14 @@ int compute_score(string word)
     printf("%s\n", word);
 
     // TODO: Compute and return score for string
-    for(int i = 0; i < sizeof ALPHABET; i++)
+    for(int i = 0; i < sizeof word; i++)
     {
-        for (int j = 0; j < sizeof word; j++)
+        for (int j = 0; j < sizeof ALPHABET; j++)
         {
-            if(word[j] == ALPHABET[i])
+            if(word[i] == ALPHABET[j])
             {
-                score += POINTS[i];
-                printf("POINT: %i\n", POINTS[i]);
+                score += POINTS[j];
+                printf("POINT: %i\n", POINTS[j]);
             }
         }
     }
