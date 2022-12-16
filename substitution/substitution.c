@@ -98,8 +98,6 @@ char *getAlphabet(string caseType)
 }
 
 
-
-
 char *lowercase(string word)
 {
     string lowercaseWord = (char*) malloc(strlen(word) * sizeof(char));
