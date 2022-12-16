@@ -17,13 +17,13 @@ int main(int argc, string argv[])
     if(key <= 0)
     {
         printf("USAGE: ./caesar key \n");
-        return 1;
+        return -1;
     }
 
     if(argc < 2 || argc > 2)
     {
         printf("USAGE: ./caesar key \n");
-        return 1;
+        return -1;
     }
 
     string plainText = get_string("plaintext: ");
@@ -55,8 +55,17 @@ char *encrypt(int key, string plainText)
 
         if(letter > 'z')
         {
+            printf("Hello \n");
             letter = 'a' + (letter - 'z') - 1;
         }
+
+        printf("plainText Letter value: %d\n", plainText[i]);
+        printf("plainText Letter: %c\n\n", plainText[i]);
+
+        printf("Letter Value: %d\n", letter);
+        printf("Letter: %c\n\n", letter);
+       // printf("plainText[i]: %c\n", plainText[i]);
+
 
          cipherText[i] = letter;
     }
