@@ -26,8 +26,6 @@ char* encrypt(int key, string plainText)
 
     int plainTextSize = (int)strlen(plainText);
     char cipherText[plainTextSize];
-    //string cipherText = "";
-    //char cipherText*;
 
     for(int i = 0; i < strlen(plainText); i++)
     {
@@ -41,9 +39,6 @@ char* encrypt(int key, string plainText)
         else if(letter > 'z'){
             letter = 'a' + (letter - 'z');
         }
-
-        printf("%c\n", letter);
-
 
         cipherText[i] = letter;
     }
