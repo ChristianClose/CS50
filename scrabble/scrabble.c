@@ -23,7 +23,6 @@ int main(void)
     printf("score1: %i\n", score1);
     printf("score2: %i\n", score2);
 
-    // TODO: Print the winner
     if(score1 > score2)
     {
         printf("Player 1 wins!\n");
