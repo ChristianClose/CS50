@@ -14,14 +14,14 @@ int main(void)
     int numOfLetters = countLetters(text);
     int numOfWords = countWords(text);
     int numOfSentences = countSentences(text);
-    int avgNumLetters = numOfLetters / numOfWords;
-    int avgNumSentences = numOfSentences / numOfWords;
-    int gradeLevel = (0.0588 * avgNumLetters) - (0.296 * avgNumSentences) - 15.8;
+    int avgNumLetters = (numOfLetters / numOfWords) * 100;
+    int avgNumSentences = (numOfSentences / numOfWords) * 100;
+    double gradeLevel = (0.0588 * avgNumLetters) - (0.296 * avgNumSentences) - 15.8;
 
     printf("%i\n", numOfLetters);
     printf("%i\n", numOfWords);
     printf("%i\n", numOfSentences);
-    printf("Grade Level: %i\n", gradeLevel);
+    printf("Grade Level: %f\n", gradeLevel);
 }
 
 int countLetters(string text)
