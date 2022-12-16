@@ -7,17 +7,17 @@ char* encrypt(int key, string plainText);
 
 int main(int argc, string argv[])
 {
-    int key;
+    int key = 0;
     if(argc >= 2)
     {
       key = atoi(argv[1]);
     }
+    printf("key: %i\n", key);
     string plainText = get_string("plaintext: ");
     char* cipherText = cipherText = encrypt(key, plainText);
 
     printf("plaintext: %s\n", plainText);
     printf("ciphertext: %s\n", cipherText);
-    printf("key: %i\n", key);
 
 }
 
