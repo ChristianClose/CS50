@@ -9,7 +9,8 @@ char *encrypt(int key, string plainText);
 int main(int argc, string argv[])
 {
     int key = 0;
-    if(argc >= 2){
+    if(argc >= 2 && isdigit(argv[1]))
+    {
         key = atoi(argv[1]);
     }
 
