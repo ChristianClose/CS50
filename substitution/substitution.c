@@ -115,9 +115,10 @@ bool validateKey(string key)
 {
     if(strlen(key) == 26)
     {
+        int duplicates = 0;
         for(int i = 0; i < strlen(key); i++)
         {
-            
+
         }
     }
 }
