@@ -20,6 +20,9 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
+    printf("score1: %i\n", score1);
+    printf("score2: %i\n", score2);
+
     // TODO: Print the winner
     if(score1 > score2)
     {
