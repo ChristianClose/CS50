@@ -12,12 +12,12 @@ int main(int argc, string argv[])
 
     if(key <= 0){
         printf("USAGE: ./caesar key");
-        return 0;
+        return -1;
     }
 
     if(argc < 2 || argc > 2){
         printf("USAGE: ./caesay key");
-        return 0;
+        return -1;
     }
 
 
