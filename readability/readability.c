@@ -8,6 +8,9 @@ bool isLetter(char letter);
 int main(void)
 {
     string text = get_string("Text: \n");
+    int numOfLetters = countLetters(text);
+
+    printf("%i", numOfLetters");
 
 
 }
@@ -21,6 +24,8 @@ int countLetters(string text)
             count++;
         }
     }
+
+    return count;
 }
 
 bool isLetter(char letter){
