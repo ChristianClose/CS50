@@ -59,7 +59,7 @@ char *encrypt(int key, string plainText)
 
     }
 
-    char *cipherTextPointer = cipherText;
+    char *cipherTextPointer = cipherText + "\0";
     return cipherTextPointer;
 }
 
