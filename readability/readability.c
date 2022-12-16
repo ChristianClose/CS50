@@ -51,14 +51,14 @@ bool isLetter(char letter){
     const int LOWERCASE_UPPER_NUM = 122;
 
     //Check if uppercase
-    for(int i = CAPITAL_LOWER_NUM; i < CAPITAL_UPPER_NUM; i++){
+    for(int i = CAPITAL_LOWER_NUM; i <= CAPITAL_UPPER_NUM; i++){
         if (letter == i){
             return true;
         }
     }
 
     //Check if lowercase
-    for(int i = LOWERCASE_LOWER_NUM; i < LOWERCASE_UPPER_NUM; i++){
+    for(int i = LOWERCASE_LOWER_NUM; i <= LOWERCASE_UPPER_NUM; i++){
         if(letter == i){
             return true;
         }
