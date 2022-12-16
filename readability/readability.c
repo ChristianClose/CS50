@@ -5,6 +5,7 @@
 int countLetters(string text);
 int countWords(string text);
 int countSentences(string text);
+int averageLetters(string text);
 bool isLetter(char letter);
 
 int main(void)
@@ -13,7 +14,6 @@ int main(void)
     int numOfLetters = countLetters(text);
     int numOfWords = countWords(text);
     int numOfSentences = countSentences(text);
-    int averageLetters = 
 
     printf("%i\n", numOfLetters);
     printf("%i\n", numOfWords);
@@ -64,6 +64,11 @@ int countSentences(string text)
     }
 
     return count;
+}
+
+int averageLetters(string text){
+    int numOfLetters = countLetters(text);
+    
 }
 
 bool isLetter(char letter){
