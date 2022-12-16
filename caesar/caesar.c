@@ -7,8 +7,11 @@ char* encrypt(int key, string plainText);
 
 int main(int argc, string argv[])
 {
-    if(argc >=)
-    int key = atoi(argv[1]);
+    int key;
+    if(argc >= 2)
+    {
+      key = atoi(argv[1]);
+    }
     string plainText = get_string("plaintext: ");
     char* cipherText = cipherText = encrypt(key, plainText);
 
