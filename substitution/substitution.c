@@ -13,6 +13,7 @@ int main(int argc, string argv[])
 {
     string key = 0;
     int isValidKey = validateKey(argv[1]);
+    printf("%i\n", isValidKey);
 
     if(argc == 2){
         if(isValidKey == 1){
@@ -133,6 +134,9 @@ int validateKey(string key)
         {
             for(int j = 1; j < strlen(key) - 1; j++)
             {
+                printf("%c \n", key[i]);
+                printf("%c \n\n", key[j]);
+                
                 if(key[i] == key[j]){
                     return 0;
                 }
