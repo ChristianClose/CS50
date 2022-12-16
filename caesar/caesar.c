@@ -8,6 +8,10 @@ int main(int argc, string argv[])
 {
     int key = atoi(argv[0]);
     string plainText = get_string("plaintext: ");
+    string cipherText = encrypt(key, plainText);
+
+    fprint("plaintext: %s\n", plainText);
+    fprint("ciphertext: %s\n", cipherText);
 
 }
 
@@ -27,6 +31,8 @@ string encrypt(int key, string plainText)
         } else if (letter > 'Z'){
             i = "A";
         }
+
+        string += letter;
 
     }
 }
