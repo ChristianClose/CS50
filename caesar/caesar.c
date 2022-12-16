@@ -81,7 +81,7 @@ char *encrypt(int key, string plainText)
 
         }
 
-        //printf("letter: %c\n", letter);
+        printf("");
 
         cipherText[i] = letter;
     }
@@ -90,7 +90,7 @@ char *encrypt(int key, string plainText)
     cipherText[plainTextSize] = '\0';
 
     //Only way to pass an array is as a pointer
-    char *cipherTextPointer = strlcpy();
+    char *cipherTextPointer = cipherText;
 
     return cipherTextPointer;
 }
