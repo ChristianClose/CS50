@@ -135,8 +135,9 @@ string validateKey(string key)
        {
             for(int j = 1; j < strlen(key); j++)
             {
-                printf("%c\n", key[i]);
-                printf("%c\n\n", key[j]);
+                if(j == i){
+                    j++;
+                }
 
                 if(key[i] == key[j]){
                     return "duplicateError";
@@ -147,7 +148,6 @@ string validateKey(string key)
                 {
                     return "invalidChar";
                 }
-                count++;
             }
     }
     }
