@@ -43,8 +43,7 @@ char *encrypt(int key, string plainText)
         cipherText[i] = letter;
     }
 
-    printf("%s\n", cipherText);
-    char *finalCipherText = cipherText;
-    return finalCipherText;
+    char *cipherTextPointer = cipherText;
+    return cipherTextPointer;
 }
 
