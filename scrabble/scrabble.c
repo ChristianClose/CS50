@@ -24,4 +24,11 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    for(int i = 0; i < sizeof word; i++)
+    {
+        for (int j = 0; j < sizeof POINTS; j++)
+        {
+            if()
+        }
+    }
 }
