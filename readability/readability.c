@@ -15,7 +15,7 @@ int main(void)
     int numOfWords = countWords(text);
     int numOfSentences = countSentences(text);
     int avgNumLetters = numOfLetters / numOfWords;
-    int avgNumSentences = numOfWords / numOfSentences;
+    int avgNumSentences = numOfSentences / numOfWords;
     int gradeLevel = (0.0588 * avgNumLetters) - (0.296 * avgNumSentences) - 15.8;
 
     printf("%i\n", numOfLetters);
