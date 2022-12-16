@@ -9,7 +9,7 @@ int main(int argc, string argv[])
 {
     int key = atoi(argv[1]);
     string plainText = get_string("plaintext: ");
-    char cipherText = encrypt(key, plainText);
+    char cipherText[] = cipherText = encrypt(key, plainText);
 
     printf("plaintext: %s\n", plainText);
     printf("ciphertext: %s\n", cipherText);
