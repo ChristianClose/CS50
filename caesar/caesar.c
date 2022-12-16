@@ -55,11 +55,14 @@ char *encrypt(int key, string plainText)
 
         if(letter > 'z')
         {
+            letter = 'a' + (letter - 'z') - 1;
             for(int j = 'a'; j < 'z'; j++)
             {
-
+                if(letter > 'z'){
+                    letter = 'a' + (letter - 'z') - 1;
+                }
             }
-            letter = 'a' + (letter - 'z') - 1;
+
         }
 
         printf("plainText Letter value: %d\n", plainText[i]);
