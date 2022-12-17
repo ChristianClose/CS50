@@ -68,9 +68,9 @@ bool vote(string name)
 {
     // TODO
 
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
             return true;
@@ -86,38 +86,43 @@ void print_winner(void)
     candidate tie[candidate_count];
     int tieCount = 0;
 
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-            if(winner.votes < candidates[i].votes)
-            {
-                winner = candidates[i];
-            }
-            else if(winner.votes == candidates[i].votes)
-            {
-                tie[tieCount] = candidates[i];
-                tieCount++;
-            }
+        if (winner.votes < candidates[i].votes)
+        {
+            winner = candidates[i];
+        }
+        else if (winner.votes == candidates[i].votes)
+        {
+            tie[tieCount] = candidates[i];
+            tieCount++;
+        }
     }
 
-    for(int i = 0; i < tieCount; i++)
+    for (int i = 0; i < tieCount; i++)
     {
-        if(tie[i].votes > winner.votes)
+        if (tie[i].votes > winner.votes)
         {
             winner = tie[i];
-            tie[i] = tie[i+1];
-        } else {
-            tie[i] = tie[i+1];
+            tie[i] = tie[i + 1];
+        }
+        else
+        {
+            tie[i] = tie[i + 1];
         }
 
     }
 
-    if(tieCount == 0){
+    if (tieCount == 0)
+    {
         printf("%s\n", winner.name);
-    } else {
+    }
+    else
+    {
         printf("%s\n", winner.name);
-        for(int i = 0; i < tieCount - 1; i++)
+        for (int i = 0; i < tieCount - 1; i++)
         {
-                printf("%s\n", tie[i].name);
+            printf("%s\n", tie[i].name);
         }
     }
 
