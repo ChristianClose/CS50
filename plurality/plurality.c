@@ -106,7 +106,7 @@ void print_winner(void)
         {
             winner = tie[i];
         } else {
-            tie[i] = null;
+            tie[i] = NULL;
         }
 
     }
