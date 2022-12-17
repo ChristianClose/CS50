@@ -105,7 +105,7 @@ void print_winner(void)
             }
             else
             {
-                winners[0] = candidates[j].name;
+                winners[totalWinners-1] = candidates[j].name;
             }
         }
     }
@@ -113,7 +113,7 @@ void print_winner(void)
     if(totalWinners == 1){
         printf("%s\n", winners[0]);
     } else {
-        for(int i = 0; i < candidate_count; i++)
+        for(int i = 0; i < sizeof(winners); i++)
         {
             printf("%s\n", winners[i]);
         }
