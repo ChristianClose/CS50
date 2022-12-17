@@ -91,7 +91,7 @@ void print_winner(void)
                 continue;
             }
 
-            if(candidates[i].votes > candidates[0].votes)
+            if(candidates[i].votes > candidates[j].votes)
             {
                 winner = candidates[i].name;
             }
@@ -102,6 +102,6 @@ void print_winner(void)
         }
     }
 
-    printf()
+    printf("%s\n", winner);
     return;
 }
