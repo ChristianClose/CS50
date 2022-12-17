@@ -88,8 +88,6 @@ void print_winner(void)
 
     for(int i = 0; i < candidate_count; i++)
     {
-        for(int j = 1; j < candidate_count - 1; j++)
-        {
             printf("%s %i\n", candidates[i].name, candidates[i].votes);
             if(winner.votes > candidates[i].votes)
             {
@@ -100,11 +98,6 @@ void print_winner(void)
                 tie[tieCount] = candidates[i];
                 tieCount++;
             }
-            else if(winner.votes < candidates[i].votes)
-            {
-                winner = candidates[j];
-            }
-        }
     }
 
     if(tieCount == 0){
