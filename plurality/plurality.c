@@ -99,25 +99,8 @@ void print_winner(void)
         }
     }
 
-    // for (int i = 0; i < tieCount; i++)
-    // {
-    //     if (tie[i].votes > winner.votes)
-    //     {
-    //         winner = tie[i];
-    //         tie[i] = tie[i + 1];
-    //     }
-    //     else
-    //     {
-    //         tie[i] = tie[i + 1];
-    //     }
-
-    // }
-
-
-
     printf("%s\n", winner.name);
-
-    for (int i = 0; i < tieCount - 1; i++)
+    for (int i = 0; i < tieCount; i++)
     {
         printf("%s\n", tie[i].name);
     }
