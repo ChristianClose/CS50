@@ -95,6 +95,7 @@ void print_winner(void)
 
             if(candidates[i].votes > candidates[j].votes)
             {
+                printf("%i\n",candidates[i].votes);
                 winners[totalWinners-1] = candidates[i].name;
             }
             else if(candidates[i].votes == candidates[j].votes)
@@ -113,7 +114,7 @@ void print_winner(void)
     if(totalWinners == 1){
         printf("%s\n", winners[0]);
     } else {
-        for(int i = 0; i < sizeof(winners); i++)
+        for(int i = 0; i < sizeof(winners) / sizeof(winners[0]); i++)
         {
             printf("%s\n", winners[i]);
         }
