@@ -99,19 +99,20 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i < tieCount; i++)
-    {
-        if (tie[i].votes > winner.votes)
-        {
-            winner = tie[i];
-            tie[i] = tie[i + 1];
-        }
-        else
-        {
-            tie[i] = tie[i + 1];
-        }
+    // for (int i = 0; i < tieCount; i++)
+    // {
+    //     if (tie[i].votes > winner.votes)
+    //     {
+    //         winner = tie[i];
+    //         tie[i] = tie[i + 1];
+    //     }
+    //     else
+    //     {
+    //         tie[i] = tie[i + 1];
+    //     }
 
-    }
+    // }
+
 
     if (tieCount == 0)
     {
