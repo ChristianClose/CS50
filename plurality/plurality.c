@@ -94,7 +94,7 @@ void print_winner(void)
             {
                 winner = candidates[i];
             }
-            else if(winner.votes == candidates[i].votes)
+            else if(winner.votes == candidates[i].votes && strcmp(winner.name, candidates[i].name) != 0)
             {
                 tie[tieCount] = candidates[i];
                 tieCount++;
