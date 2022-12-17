@@ -100,6 +100,17 @@ void print_winner(void)
             }
     }
 
+    for(int i = 0; i < tieCount; i++)
+    {
+        if(tie[i].votes > winner.votes)
+        {
+            winner = tie[i];
+        } else {
+            tie[i] = null;
+        }
+
+    }
+
     if(tieCount == 0){
         printf("%s\n", winner.name);
     } else {
