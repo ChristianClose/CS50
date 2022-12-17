@@ -99,7 +99,7 @@ void print_winner(void)
                 tie[tieCount] = candidates[i];
                 tieCount++;
             }
-            else
+            else if(winner.votes < candidates[i].votes)
             {
                 winner = candidates[j];
             }
