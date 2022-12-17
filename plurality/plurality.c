@@ -86,7 +86,7 @@ void print_winner(void)
     candidate tie[candidate_count];
     int tieCount = 0;
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
         if (winner.votes < candidates[i].votes)
         {
@@ -99,19 +99,19 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i < tieCount; i++)
-    {
-        if (tie[i].votes > winner.votes)
-        {
-            winner = tie[i];
-            tie[i] = tie[i + 1];
-        }
-        else
-        {
-            tie[i] = tie[i + 1];
-        }
+    // for (int i = 0; i < tieCount; i++)
+    // {
+    //     if (tie[i].votes > winner.votes)
+    //     {
+    //         winner = tie[i];
+    //         tie[i] = tie[i + 1];
+    //     }
+    //     else
+    //     {
+    //         tie[i] = tie[i + 1];
+    //     }
 
-    }
+    // }
 
 
 
