@@ -118,7 +118,10 @@ void print_winner(void)
         printf("%s\n", winner.name);
         for(int i = 0; i <= tieCount; i++)
         {
-            printf("%s\n", tie[i].name);
+            if(tie[i] != NULL){
+                printf("%s\n", tie[i].name);
+            }
+
         }
     }
 
