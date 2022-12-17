@@ -113,7 +113,7 @@ void print_winner(void)
     if(totalWinners == 1){
         printf("%s\n", winners[0]);
     } else {
-        for(int i = 0; i < candidate_count; I++)
+        for(int i = 0; i < candidate_count; i++)
         {
             printf("%s\n", winners[i]);
         }
