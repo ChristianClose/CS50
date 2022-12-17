@@ -105,8 +105,9 @@ void print_winner(void)
         if(tie[i].votes > winner.votes)
         {
             winner = tie[i];
+            tie[i] = tie[i+1];
         } else {
-            tie[i] = NULL;
+            tie[i] = tie[i+1];
         }
 
     }
