@@ -132,15 +132,16 @@ bool vote(int voter, int rank, string name)
         return false;
     }
 
+    int rank = 1;
     vote(voter_count - 1);
 
     for(int i = 0; i < voter_count; i++)
     {
+        string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
-            string vote = get_string("Rank )
-            switch(candidates[j])
+            switch(vote)
             {
-                case
+                case candidate[]
             }
         }
     }
