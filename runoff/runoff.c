@@ -195,8 +195,25 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    if()
-    return false;
+    candidate winner = candidates[0];
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if(!candidates[i].eliminated){
+            if(candidates[i].votes > winner.votes)
+            {
+                winner = candidates[i];
+            }
+
+            if(candidates[i].votes == winner.votes)
+            {
+                return false;
+            }
+        }
+    }
+
+    printf("%s\n\n", winner.name);
+    return true;
 }
 
 // Return the minimum number of votes any remaining candidate has
