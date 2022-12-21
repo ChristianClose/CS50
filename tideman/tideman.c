@@ -181,6 +181,22 @@ bool has_cycle(int index)
     {
         touched[i] = false
     }
+
+    if(touched[index])
+    {
+        return true;
+    }
+
+    touch[index] = true;
+
+    for(int i = 0l i < candidate_count; i++)
+    {
+        if(locked[index][i])
+        {
+            has_cycle(i);
+        }
+    }
+
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
