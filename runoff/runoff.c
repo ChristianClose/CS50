@@ -158,49 +158,24 @@ void tabulate(void)
             candidate voter_preference = candidates[preferences[voter][rank]];
             candidate current_candidate =  candidates[rank];
 
-            if(rank == 0)
+            if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
-                if(strcmp(voter_preference.name, current_candidate.name) == 0)
-                {
-                    current_candidate.votes++;
-                }
-
-                if(current_candidate.votes > winner.votes)
-                {
-                    winner.eliminated = true;
-                    winner = candidates[rank];
-                }
-                else if(current_candidate.votes == winner.votes)
-                {
-                    tie = current_candidate;
-                }
-                else
-                {
-                    candidates[rank].eliminated = true;
-                }
-            }
-            else if(rank > 0 && !current_candidate.eliminated)
-            {
-                if(strcmp(voter_preference.name, current_candidate.name) == 0)
-                {
-                    current_candidate.votes++;
-                }
-
-                if(current_candidate.votes > winner.votes)
-                {
-                    winner.eliminated = true;
-                    winner = candidates[rank];
-                }
-                else if(current_candidate.votes == winner.votes)
-                {
-                    tie = current_candidate;
-                }
-                else
-                {
-                    candidates[rank].eliminated = true;
-                }
+                current_candidate.votes++;
             }
 
+            if(current_candidate.votes > winner.votes)
+            {
+                winner.eliminated = true;
+                winner = candidates[rank];
+            }
+            else if(current_candidate.votes == winner.votes)
+            {
+                tie = current_candidate;
+            }
+            else
+            {
+                candidates[rank].eliminated = true;
+            }
         }
     }
 
