@@ -185,7 +185,7 @@ void tabulate(void)
                         winner.eliminated = true;
                         winner = candidates[rank];
                     }
-                    else if (candidates[rank].votes < winner.votes
+                    else if (candidates[rank].votes < winner.votes)
                     {
                         candidates[rank].eliminated = true;
                     }
@@ -203,7 +203,6 @@ void tabulate(void)
 
     }
 
-    }
 
     for(int i = 0; i < candidate_count; i++)
     {
