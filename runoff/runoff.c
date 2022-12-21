@@ -149,9 +149,9 @@ void tabulate(void)
 {
     for(int voter = 0; voter < voter_count; voter++)
     {
-        for(int rank = 0; rank < 3; candidate_index++)
+        for(int rank = 0; rank < candidate_count; rank++)
         {
-            if(preferences[voter][candidate_index] == candidate_index)
+            if(strcmp(candidates[preferences[voter][rank]].name, candidates[rank].name) == 0)
             {
                 candidates[candidate_index].votes++;
             }
