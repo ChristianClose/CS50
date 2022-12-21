@@ -88,7 +88,7 @@ int main(int argc, string argv[])
     while (true)
     {
         // Calculate votes given remaining candidates
-        //tabulate();
+        tabulate();
 
         // Check if election has been won
         bool won = print_winner();
@@ -159,29 +159,27 @@ void tabulate(void)
 
             printf("voter pref: %s\n", voter_preference.name);
             printf("current_candidate: %s\n\n", current_candidate.name);
-        if(current_candidate.eliminated){
-            break;
-        }
-        else
-        {
-            if(strcmp(voter_preference.name, current_candidate.name) == 0)
-            {
-                current_candidate.votes++;
+            if(current_candidate.eliminated){
+                break;
             }
+            else
+            {
+                if(strcmp(voter_preference.name, current_candidate.name) == 0)
+                {
+                    current_candidate.votes++;
+                }
 
-            if(candidates[rank].votes > winner.votes)
-            {
-                winner.eliminated = true;
-                winner = current_candidate;
-            }
-            else if (candidates[rank].votes < winner.votes)
-            {
-                current_candidate.eliminated = true;
+                if(candidates[rank].votes > winner.votes)
+                {
+                    winner.eliminated = true;
+                    winner = current_candidate;
+                }
+                else if (candidates[rank].votes < winner.votes)
+                {
+                    current_candidate.eliminated = true;
+                }
             }
         }
-
-        }
-
     }
 
 
