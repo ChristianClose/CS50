@@ -98,7 +98,7 @@ void print_winner(void)
             tieCount++;
         }
     }
-
+a
     printf("%s\n", winner.name);
     for (int i = 0; i < tieCount; i++)
     {
