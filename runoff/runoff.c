@@ -168,8 +168,8 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
     candidate winner = candidates[0];
+    bool is_winner = true;
 
     for(int i = 1; i < candidate_count; i++)
     {
@@ -177,17 +177,25 @@ bool print_winner(void)
             if(candidates[i].votes > winner.votes)
             {
                 winner = candidates[i];
+                is_winner = true;
             }
 
             if(candidates[i].votes == winner.votes)
             {
+                is_winner = false;
                 return false;
             }
+        } else {
+            is_winner = false;
         }
     }
 
-    printf("%s\n\n", winner.name);
-    return true;
+    if(is_winner){
+        printf("%s\n\n", winner.name);
+        return true;
+    }
+
+    return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
