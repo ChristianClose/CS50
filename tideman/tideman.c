@@ -170,7 +170,7 @@ void sort_pairs(void)
         for(int j = 0; j < candidate_count; j++)
         {
 
-            if(preferences[i][j] < preferences[j][i])
+            if(preferences[pairs[i].winner][pairs[j].winner] < preferences[j][i])
             {
                 temp = pairs[i];
                 pairs[i] = pairs[j];
