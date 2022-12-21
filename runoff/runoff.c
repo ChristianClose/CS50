@@ -155,6 +155,8 @@ void tabulate(void)
             {
                 candidates[candidate_index].votes++;
             }
+
+            if(rank == candidate_count - 1)
         }
     }
     return;
