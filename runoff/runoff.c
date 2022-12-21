@@ -134,7 +134,7 @@ bool vote(int voter, int rank, string name)
         return false;
     }
 
-    vote(voter, rank, name);
+    //vote(voter, rank, name);
 
     for(int i = voter; i < voter_count; i++)
     {
