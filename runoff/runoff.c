@@ -162,6 +162,8 @@ void tabulate(void)
             {
                 winner.eliminated = true;
                 winner = candidates[rank];
+            } else {
+                candidates[rank].eliminated = true;
             }
         }
 
