@@ -121,10 +121,10 @@ void record_preferences(int ranks[])
         {
             if(strcmp(candidates[cand_i], candidates[cand_j]) == 0){
                 preferences[cand_i][cand_j]++;
+                printf("%i\n", preferences[cand_i][cand_j]);
             }
 
 
-            printf("%i\n", preferences[cand_i][cand_j]);
         }
     }
 }
