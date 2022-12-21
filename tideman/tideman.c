@@ -159,26 +159,21 @@ void sort_pairs(void)
         return;
     }
 
+
     pair_count--;
     // TODO
     for(int i = 0; i < candidate_count; i++)
     {
-        for(int j = 0; j < candidate_count; j++)
+        for(int j = i; j < candidate_count; j++)
         {
-            if(preferences[i][j] > preferences[j][i])
-            {
-                pairs[i] = i;
-                sort(pairs);
-            }
 
             if(preferences[i][j] < preferences[j][i])
             {
-                pairs[i] = j;
-                sort(pairs);
+                pairs[i] = pairs[j];
+                sort_pairs();
             }
         }
     }
-    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
