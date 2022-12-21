@@ -151,14 +151,18 @@ void tabulate(void)
 
     for(int voter = 0; voter < voter_count; voter++)
     {
-        for(int rank = 1; rank < candidate_count; rank++)
+        for(int rank = 0; rank < candidate_count; rank++)
         {
             if(strcmp(candidates[preferences[voter][rank]].name, candidates[rank].name) == 0)
             {
-                candidates[candidate_index].votes++;
+                candidates[rank].votes++;
             }
 
-            if(rank == candidate_count - 1)
+            if(candidates[rank].vote > winner.votes)
+            {
+                winner = candidates[rank];
+                candidates[rank].eliminated = true;
+            }
         }
     }
     return;
