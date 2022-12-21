@@ -179,7 +179,7 @@ bool has_cycle(int index)
     bool touched[candidate_count];
     for(int i = 0; i < candidate_count; i++)
     {
-        touched[i] = false
+        touched[i] = false;
     }
 
     if(touched[index])
@@ -187,15 +187,17 @@ bool has_cycle(int index)
         return true;
     }
 
-    touch[index] = true;
+    touched[index] = true;
 
-    for(int i = 0l i < candidate_count; i++)
+    for(int i = 0; i < candidate_count; i++)
     {
         if(locked[index][i])
         {
             has_cycle(i);
         }
     }
+
+    return false;
 
 }
 
