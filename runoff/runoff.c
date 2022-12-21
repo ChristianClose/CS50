@@ -169,7 +169,6 @@ void tabulate(void)
 bool print_winner(void)
 {
     candidate winner = candidates[0];
-    bool is_winner = true;
 
     for(int i = 1; i < candidate_count; i++)
     {
@@ -177,20 +176,16 @@ bool print_winner(void)
             if(candidates[i].votes > winner.votes)
             {
                 winner = candidates[i];
-                is_winner = true;
             }
 
             if(candidates[i].votes == winner.votes)
             {
-                is_winner = false;
                 return false;
             }
-        } else {
-            is_winner = false;
         }
     }
 
-    if(is_winner){
+    if(winner.votes > 0) 
         printf("%s\n\n", winner.name);
         return true;
     }
