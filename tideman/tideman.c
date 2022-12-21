@@ -186,11 +186,12 @@ bool cycle(int winner, int loser)
 void lock_pairs(void)
 {
     // TODO
+    locked[pairs[0].loser][pairs[0].winner] = true;
     for(int i = 0; i < pair_count; i++)
     {
         for(int j = 0; j < pair_count; j++)
         {
-            
+
         }
     }
 }
