@@ -139,10 +139,7 @@ bool vote(int voter, int rank, string name)
     {
         string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
-            if(candidates[j].name == vote)
-            {
-                preferences[i][j] = vote;
-            }
+            switch(vote)
         }
     }
     // TODO
