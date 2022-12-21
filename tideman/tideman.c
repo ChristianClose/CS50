@@ -174,7 +174,7 @@ void sort_pairs(void)
     }
 }
 
-bool has_cycle(int index)
+bool has_cycle(int winner, int loser)
 {
     bool touched[candidate_count];
     for(int i = 0; i < candidate_count; i++)
