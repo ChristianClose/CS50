@@ -1,11 +1,11 @@
-sort1 uses: Bubble Sort
+sort1 uses: Bubble
 
 How do you know?: Slowest runtime
 
-sort2 uses: Merge Sort
+sort2 uses: Merge
 
 How do you know?: Quick Regardless of size
 
-sort3 uses: Selection Sort
+sort3 uses: Selection
 
 How do you know?: Faster than sort1 but slower than sort2
