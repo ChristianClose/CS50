@@ -212,5 +212,12 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    return;
+    winner = candidate[0];
+    for(int i = 0; i < candidate_count; i++)
+    {
+        for(int j = 0; j < candidate_count; j++)
+        {
+            if(!locked[i][j])
+        }
+    }
 }
