@@ -155,14 +155,6 @@ void tabulate(void)
             }
         }
     }
-
-
-    for(int i = 0; i < candidate_count; i++)
-    {
-        printf("Candidate name: %s\n", candidates[i].name);
-        printf("Candidate votes: %i\n", candidates[i].votes);
-        printf("Candidate eliminated: %i\n\n", candidates[i].eliminated);
-    }
 }
 
 // Print the winner of the election, if there is one
