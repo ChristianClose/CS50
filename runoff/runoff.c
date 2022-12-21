@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
 {
 
     for (int i = 0; i < candidate_count; i++){
-        if( strcmp(name, candidates[i].name) = 0)
+        if( strcmp(name, candidates[i].name) == 0)
         {
              preferences[voter][rank] = i;
              return true;
@@ -149,7 +149,7 @@ void tabulate(void)
     {
         for(int rank = 0; rank < candidate_count; rank++)
         {
-            if(!voter_preference.eliminated)
+            if(!candidates[preferences[voter][rank]].eliminated)
             {
                 candidates[preferences[voter][rank]].votes++;
             }
@@ -208,6 +208,5 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    if()
     return;
 }
