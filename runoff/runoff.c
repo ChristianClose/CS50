@@ -127,6 +127,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
+    int temp_voter_count = voter_count;
     if(voter_count <= 0)
     {
         return false;
@@ -139,15 +140,14 @@ bool vote(int voter, int rank, string name)
     {
         string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
-            switch(vote)
+            if(strcmp(vote, candidates[j])
             {
-                case candidates[j]:
-                    
+                    preferences[i][j] = j;
             }
         }
     }
     // TODO
-    return false;
+    return true;
 }
 
 // Tabulate votes for non-eliminated candidates
