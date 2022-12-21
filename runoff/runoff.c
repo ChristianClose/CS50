@@ -156,7 +156,7 @@ void tabulate(void)
         for(int rank = 0; rank < candidate_count; rank++)
         {
             candidate voter_preference = candidates[preferences[voter][rank]];
-            candidate current_candidate =  candidates[rank];
+            candidate current_candidate = candidates[rank];
 
             if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
