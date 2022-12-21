@@ -168,10 +168,6 @@ void tabulate(void)
                 winner.eliminated = true;
                 winner = candidates[rank];
             }
-            else if(current_candidate.votes == winner.votes)
-            {
-                tie = current_candidate;
-            }
             else
             {
                 candidates[rank].eliminated = true;
