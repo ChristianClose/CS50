@@ -162,20 +162,15 @@ void sort_pairs(void)
         return;
     }
 
-
-    pair_count--;
     pair temp;
-    for(int i = pair_count; i >= 0; i--)
+    for(int i = 0; i < pair_count; i++)
     {
-        for(int j = pair_count; j >= 0; j--)
+        for(int j = 1; j < pair_count - 1; j++)
         {
-
-            if(preferences[i][j] > preferences[j][i])
-            {
+            if(pairs[j].winner > pairs[i].winner){
                 temp = pairs[i];
                 pairs[i] = pairs[j];
                 pairs[j] = temp;
-                sort_pairs();
             }
         }
     }
