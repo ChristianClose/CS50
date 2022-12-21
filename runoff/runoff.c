@@ -204,8 +204,6 @@ void tabulate(void)
         }
     }
 
-    for(int rank)
-
     for(int i = 0; i < candidate_count; i++)
     {
         printf("Candidate name: %s\n", candidates[i].name);
