@@ -149,18 +149,21 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     candidate winner = candidates[0];
-    int rank = 0;
 
     for(int voter = 0; voter < voter_count; voter++)
     {
-        for(int candidate_index = 0; candidate_index < candidate_count; candidate_index++)
+        for(int rank = 0; rank < rank; rank++)
         {
             candidate voter_preference = candidates[preferences[voter][rank]];
-            candidate current_candidate =  candidates[candidate_index];
+            candidate current_candidate =  candidates[rank];
 
             printf("voter pref: %s\n", voter_preference.name);
             printf("current_candidate: %s\n\n", current_candidate.name);
-
+        if(current_candidate.eliminated){
+            break;
+        }
+        else
+        {
             if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
                 current_candidate.votes++;
@@ -175,6 +178,8 @@ void tabulate(void)
             {
                 current_candidate.eliminated = true;
             }
+        }
+
         }
 
     }
