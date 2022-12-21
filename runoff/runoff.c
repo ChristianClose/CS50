@@ -128,25 +128,17 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    int temp_voter_count = voter_count;
     if(voter_count <= 0)
     {
         return false;
     }
 
-    //vote(voter, rank, name);
-
-    for(int i = voter; i < voter_count; i++)
-    {
-        string vote = get_string("Rank: %i", rank);
-        for (int j = 0; j < candidate_count; j++){
-            if(strcmp(vote, candidates[j].name) == 0)
-            {
-                    preferences[voter][j] = j;
-            }
+    for (int i = 0; i < candidate_count; i++){
+        if(strcmp(name, candidates[i].name) == 0)
+        {
+                preferences[voter][i] = i;
         }
     }
-    // TODO
     return true;
 }
 
