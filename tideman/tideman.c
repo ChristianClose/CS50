@@ -166,7 +166,7 @@ void sort_pairs(void)
 
 
     pair_count--;
-    // TODO
+    pair temp;
     for(int i = 0; i < candidate_count; i++)
     {
         for(int j = 0; j < candidate_count; j++)
@@ -174,7 +174,9 @@ void sort_pairs(void)
 
             if(preferences[i][j] < preferences[j][i])
             {
+                temp = pairs[i];
                 pairs[i] = pairs[j];
+                pairs[j] = temp;
                 sort_pairs();
             }
         }
