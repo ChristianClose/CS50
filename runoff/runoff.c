@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
         }
     }
 
-    return true;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
