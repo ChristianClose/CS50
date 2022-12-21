@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
         }
         else
         {
-             preferences[voter][i] = i;
+             preferences[voter][rank] = i;
              return true;
         }
     }
@@ -159,7 +159,7 @@ void tabulate(void)
             candidate current_candidate =  candidates[candidate_index];
 
             printf("voter pref: %s\n", voter_preference.name);
-            printf("current_candidate: %s\n", current_candidate.name);
+            printf("current_candidate: %s\n\n", current_candidate.name);
 
             if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
