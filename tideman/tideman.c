@@ -165,12 +165,12 @@ void sort_pairs(void)
 
     pair_count--;
     pair temp;
-    for(int i = 0; i < candidate_count; i++)
+    for(int i = pair_count; i >= 0; i--)
     {
-        for(int j = 0; j < candidate_count; j++)
+        for(int j = pair_count; j >= 0; j--)
         {
 
-            if(preferences[i][j] < preferences[j][i])
+            if(preferences[i][j] > preferences[j][i])
             {
                 temp = pairs[i];
                 pairs[i] = pairs[j];
