@@ -161,7 +161,7 @@ void tabulate(void)
     {
         printf("Candidate name: %s\n", candidates[i].name);
         printf("Candidate votes: %i\n", candidates[i].votes);
-        printf("Candidate eliminated: %i\n", candidates[i].eliminated);
+        printf("Candidate eliminated: %i\n\n", candidates[i].eliminated);
     }
 }
 
