@@ -210,7 +210,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    for
+    for()
     return false;
 }
 
