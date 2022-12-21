@@ -152,7 +152,7 @@ void tabulate(void)
 
     for(int voter = 0; voter < voter_count; voter++)
     {
-        for(int rank = 0; rank < rank; rank++)
+        for(int rank = 0; rank < candidate_count; rank++)
         {
             candidate voter_preference = candidates[preferences[voter][rank]];
             candidate current_candidate =  candidates[rank];
