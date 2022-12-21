@@ -164,8 +164,8 @@ void tabulate(void)
                 candidates[rank].eliminated = true;
             }
         }
+
     }
-    return;
 }
 
 // Print the winner of the election, if there is one
