@@ -234,5 +234,6 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
+    if()
     return;
 }
