@@ -122,7 +122,7 @@ void record_preferences(int ranks[])
         for (int j = 0; j < candidate_count; j++)
         {
             printf("i: %i\n", i);
-            printf("j: %i\n", j);
+            printf("sizeof ranks: %lu\n", sizeof(ranks) );
             if(strcmp(candidates[ranks[i]], candidates[j]) == 0)
             {
                 preferences[i][j]++;
