@@ -171,7 +171,11 @@ void sort_pairs(void)
                 sort(pairs);
             }
 
-            if(preferences[i][j] <)
+            if(preferences[i][j] < preferences[j][i])
+            {
+                pairs[i] = j;
+                sort(pairs);
+            }
         }
     }
     return;
