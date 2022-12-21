@@ -140,7 +140,7 @@ bool vote(int voter, int rank, string name)
     {
         string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
-            if(strcmp(vote, candidates[j].name)
+            if(strcmp(vote, candidates[j].name) == 0)
             {
                     preferences[i][j] = j;
             }
