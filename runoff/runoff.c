@@ -181,7 +181,24 @@ void tabulate(void)
             }
             else if(rank > 0 && !current_candidate.eliminated)
             {
+                if(strcmp(voter_preference.name, current_candidate.name) == 0)
+                {
+                    current_candidate.votes++;
+                }
 
+                if(current_candidate.votes > winner.votes)
+                {
+                    winner.eliminated = true;
+                    winner = candidates[rank];
+                }
+                else if(current_candidate.votes == winner.votes)
+                {
+                    tie = current_candidate;
+                }
+                else
+                {
+                    candidates[rank].eliminated = true;
+                }
             }
 
         }
