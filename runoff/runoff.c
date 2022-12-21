@@ -148,10 +148,10 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     candidate winner = candidates[0];
-    
+
     for(int voter = 0; voter < voter_count; voter++)
     {
-        for(int rank = 0; rank < candidate_count; rank++)
+        for(int rank = 1; rank < candidate_count; rank++)
         {
             if(strcmp(candidates[preferences[voter][rank]].name, candidates[rank].name) == 0)
             {
