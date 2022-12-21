@@ -157,6 +157,10 @@ void tabulate(void)
         {
             candidate voter_preference = candidates[preferences[voter][rank]];
             candidate current_candidate =  candidates[candidate_index];
+
+            printf("voter pref: %s\n", voter_preference.name);
+            printf("current_candidate: %s\n", current_candidate.name);
+
             if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
                 current_candidate.votes++;
