@@ -102,7 +102,12 @@ bool vote(int rank, string name, int ranks[])
     // TODO
     for(int i = 0; i < candidate_count; i++)
     {
-        for(int j = 0; j < )
+            if(candidate[i].name == name)
+            {
+                ranks[i] = i;
+                return true;
+            }
+
     }
     return false;
 }
