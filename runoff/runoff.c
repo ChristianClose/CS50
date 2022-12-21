@@ -139,9 +139,9 @@ bool vote(int voter, int rank, string name)
     {
         string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
-            switch(vote)
+            if(candidates[j].name == vote)
             {
-                case candidate[]
+                candidates[j].votes++;
             }
         }
     }
