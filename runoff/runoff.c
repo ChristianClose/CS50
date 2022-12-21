@@ -134,15 +134,15 @@ bool vote(int voter, int rank, string name)
         return false;
     }
 
-    vote(voter_count - 1, rank, name);
+    vote(voter, rank, name);
 
-    for(int i = 0; i < voter_count; i++)
+    for(int i = voter; i < voter_count; i++)
     {
         string vote = get_string("Rank: %i", rank);
         for (int j = 0; j < candidate_count; j++){
             if(strcmp(vote, candidates[j].name) == 0)
             {
-                    preferences[i][j] = j;
+                    preferences[voter][j] = j;
             }
         }
     }
