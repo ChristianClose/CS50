@@ -153,54 +153,22 @@ void tabulate(void)
 
     for(int voter = 0; voter < voter_count; voter++)
     {
-            candidate voter_preference = candidates[preferences[voter][rank]];
-            candidate current_candidate =  candidates[rank];
-            if(rank == 0)
-            {
-                if(strcmp(voter_preference.name, current_candidate.name) == 0)
-                {
-                    candidates[rank].votes++;
-                }
+        candidate voter_preference = candidates[preferences[voter][rank]];
+        candidate current_candidate =  candidates[rank];
+        if(strcmp(voter_preference.name, current_candidate.name) == 0)
+        {
+            candidates[rank].votes++;
+        }
 
-                if(candidates[rank].votes > winner.votes)
-                {
-                    winner.eliminated = true;
-                    winner = candidates[rank];
-                }
-                else if (candidates[rank].votes < winner.votes)
-                {
-                    candidates[rank].eliminated = true;
-                }
-
-            }
-            else
-            {
-                if(!current_candidate.eliminated){
-                    if(strcmp(voter_preference.name, current_candidate.name) == 0)
-                    {
-                        candidates[rank].votes++;
-                    }
-                    if(candidates[rank].votes > winner.votes)
-                    {
-                        winner.eliminated = true;
-                        winner = candidates[rank];
-                    }
-                    else if (candidates[rank].votes < winner.votes)
-                    {
-                        candidates[rank].eliminated = true;
-                    }
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            if(voter == voter_count - 1)
-            {
-                rank++;
-            }
-
+        if(candidates[rank].votes > winner.votes)
+        {
+            winner.eliminated = true;
+            winner = candidates[rank];
+        }
+        else if (candidates[rank].votes < winner.votes)
+        {
+            candidates[rank].eliminated = true;
+        }
     }
 
 
