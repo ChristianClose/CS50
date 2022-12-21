@@ -171,7 +171,7 @@ bool print_winner(void)
     // TODO
     candidate winner = candidates[0];
 
-    for(int i = 0; i < candidate_count; i++)
+    for(int i = 1; i < candidate_count; i++)
     {
         if(!candidates[i].eliminated){
             if(candidates[i].votes > winner.votes)
