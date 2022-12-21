@@ -155,6 +155,7 @@ void tabulate(void)
     {
             candidate voter_preference = candidates[preferences[voter][rank]];
             candidate current_candidate =  candidates[rank];
+            if(voter_preference)
             if(strcmp(voter_preference.name, current_candidate.name) == 0)
             {
                 candidates[rank].votes++;
