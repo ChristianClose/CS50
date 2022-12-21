@@ -102,7 +102,6 @@ bool vote(int rank, string name, int ranks[])
 {
         for(int i = 0; i < candidate_count; i++)
         {
-            printf("%s\n", candidates[i]);
             if(strcmp(candidates[i], name) == 0)
             {
                 ranks[rank] = i;
@@ -122,9 +121,6 @@ void record_preferences(int ranks[])
             if(cand_i > cand_j){
                 preferences[cand_i][cand_j]++;
             }
-
-
-            printf("%i\n", preferences[cand_i][cand_j]);
         }
     }
 }
