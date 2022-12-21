@@ -174,11 +174,19 @@ void sort_pairs(void)
     }
 }
 
+bool cycle(int winner, int loser)
+{
+    if(locked[loser][winner])
+    {
+        return true;
+    }
+}
+
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
     // TODO
-    
+
     return;
 }
 
