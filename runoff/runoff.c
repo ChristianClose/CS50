@@ -153,18 +153,27 @@ void tabulate(void)
     {
         for(int rank = 0; rank < candidate_count; rank++)
         {
-            if(strcmp(candidates[preferences[voter][rank]].name, candidates[rank].name) == 0)
+            candidate voter_preference = candidates[preferences[voter][rank]];
+            candidate current_candidate =  candidates[rank];
+            if(!voter_preference.eliminated){
+                if(strcmp(voter_preference.name, current_candidate.name) == 0)
+                {
+                    candidates[rank].votes++;
+                }
+
+                if(candidates[rank].votes > winner.votes)
+                {
+                    winner.eliminated = true;
+                    winner = candidates[rank];
+                } else {
+                    candidates[rank].eliminated = true;
+                }
+            }
+            else
             {
-                candidates[rank].votes++;
+                break;
             }
 
-            if(candidates[rank].votes > winner.votes)
-            {
-                winner.eliminated = true;
-                winner = candidates[rank];
-            } else {
-                candidates[rank].eliminated = true;
-            }
         }
 
     }
