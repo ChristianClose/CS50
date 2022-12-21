@@ -119,12 +119,12 @@ void record_preferences(int ranks[])
     {
         for (int cand_j = 0; cand_j < candidate_count; cand_j++)
         {
-            if(strcmp(candidates[cand_i], candidates[cand_j]) == 0){
-                preferences[ranks[cand_i]][ranks[cand_j]]++;
-                printf("%i\n", preferences[cand_i][cand_j]);
+            if(cand_i > cand_j){
+                preferences[cand_i][cand_j]++;
             }
 
 
+            printf("%i\n", preferences[cand_i][cand_j]);
         }
     }
 }
