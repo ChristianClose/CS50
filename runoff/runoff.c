@@ -160,11 +160,18 @@ void tabulate(void)
 
             if(candidates[rank].votes > winner.votes)
             {
-                winner[rank].eliminated = true;
+                winner.eliminated = true;
                 winner = candidates[rank];
             }
         }
 
+    }
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        printf("Candidate name: %s\n", candidates[i].name);
+        printf("Candidate votes: %i\n", candidates[i].votes);
+        printf("Candidate eliminated: %i\n", candidates[i].eliminated);
     }
 }
 
