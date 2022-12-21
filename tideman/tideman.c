@@ -174,11 +174,12 @@ void sort_pairs(void)
     }
 }
 
-bool cycle(int winner, int loser)
+bool has_cycle(int index)
 {
-    if(locked[loser][winner])
+    bool touched[candidate_count];
+    for(int i = 0; i < candidate_count; i++)
     {
-        return true;
+        touched[i] = false
     }
 }
 
@@ -189,10 +190,13 @@ void lock_pairs(void)
     locked[pairs[0].loser][pairs[0].winner] = true;
     for(int i = 0; i < pair_count; i++)
     {
-        for(int j = 0; j < pair_count; j++)
-        {
+        locked[pairs[i].winner][pairs[i].loser] = true;
 
+        if(has_cycle(i))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = false;
         }
+
     }
 }
 
