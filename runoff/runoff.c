@@ -158,7 +158,7 @@ void tabulate(void)
                 candidates[rank].votes++;
             }
 
-            if(candidates[rank].vote > winner.votes)
+            if(candidates[rank].votes > winner.votes)
             {
                 winner = candidates[rank];
                 candidates[rank].eliminated = true;
