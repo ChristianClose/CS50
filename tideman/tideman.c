@@ -83,8 +83,8 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 3;
             }
+            printf("Candidate: %s\n", candidates[ranks[j]]);
         }
-        printf("Candidate: %s", candidates[ranks[i]]);
         record_preferences(ranks);
 
         printf("\n");
