@@ -83,7 +83,6 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 3;
             }
-            printf("Candidate: %s\n", candidates[ranks[j]]);
         }
         record_preferences(ranks);
 
@@ -100,14 +99,16 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    // TODO
     for(int i = 0; i < candidate_count; i++)
     {
-            if(strcmp(candidates[i], name) == 0)
+        for(int j = 0; j < candidate_count; j++)
+        {
+            if(strcmp(candidates[j], name) == 0)
             {
-                ranks[i] = i;
+                ranks[i] = j;
                 return true;
             }
+        }
     }
     return false;
 }
