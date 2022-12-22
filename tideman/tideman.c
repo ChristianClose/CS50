@@ -84,7 +84,6 @@ int main(int argc, string argv[])
                 return 3;
             }
         }
-        printf("sizeof ranks: %lu\n", sizeof(ranks) / sizeof(ranks[0]));
         record_preferences(ranks);
 
         printf("\n");
@@ -224,5 +223,5 @@ void print_winner(void)
         }
     }
 
-    printf("Winner: %s\n", candidates[winner]);
+    printf("%s\n", candidates[winner]);
 }
