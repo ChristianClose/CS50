@@ -212,15 +212,20 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    winner = candidate[0];
+    string winner = candidates[0];
     for(int i = 0; i < candidate_count; i++)
     {
         for(int j = 0; j < candidate_count; j++)
         {
-            if(!locked[i][j] && j == candidate_count -1)
-            {
-                
+            if(locked[i][j]){
+                break;
+            }
+
+            if(!locked[i][j] && j == candidate_count -1){
+                winner = candidates[locked[i][j]];
             }
         }
     }
+
+    printf("Winner: %s\n", winner );
 }
