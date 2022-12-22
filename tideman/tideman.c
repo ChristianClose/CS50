@@ -207,9 +207,10 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    string winner = candidates[0];
+    int winner = 0;
     for(int i = 0; i < candidate_count; i++)
     {
+        int candidate_locked = 1;
         for(int j = 0; j < candidate_count; j++)
         {
             if(locked[j][i]){
