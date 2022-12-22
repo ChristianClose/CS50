@@ -92,11 +92,6 @@ int main(int argc, string argv[])
 
     add_pairs();
     sort_pairs();
-
-    for(int i = 0; i < candidate_count; i++)
-    {
-        printf("%i\n", pairs[i].winner);
-    }
     lock_pairs();
     print_winner();
     return 0;
@@ -217,7 +212,7 @@ void print_winner(void)
     {
         for(int j = 0; j < candidate_count; j++)
         {
-            if(locked[i][j]){
+            if(locked[j][j]){
                 break;
             }
 
