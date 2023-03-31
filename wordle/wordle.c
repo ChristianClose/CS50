@@ -119,7 +119,11 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
-    
+        do
+        {
+            scanf("%s", )
+        }
+        while(strlen(guess) < wordsize || strlen(guess) > wordsize);
     return guess;
 }
 
