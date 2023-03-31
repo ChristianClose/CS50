@@ -28,12 +28,13 @@ int main(int argc, string argv[])
     // ensure proper usage
     // TODO #1
     int wordsize = 0;
-    bool has_args = sizeof(argv) > 1;
+    bool has_args = sizeof(argv)/sizeof(argv[0]) > 1;
     bool is_arg_in_range = argv[1] < 4 && argv[1] < 9;
 
-    if(has_args && is_arg_in_range)
+    if(!has_arg)
     {
-        wordsize = 
+        printf("Usage: ./wordle wordsize");
+        return 1;
     }
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
