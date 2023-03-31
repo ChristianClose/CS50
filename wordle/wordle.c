@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     // ensure proper usage
     // TODO #1
     int wordsize = 0;
-    bool has_args = sizeof(&argv)/sizeof(&argv[0]) > 1;
+    bool has_args = argc > 1;
     bool is_arg_in_range = atoi(argv[1]) < 4 && atoi(argv[1]) < 9;
 
     if(!has_args)
@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     }
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-
+    is_arg_in_range = atoi(argv[1]) < 4 && atoi(argv[1]) < 9;
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
