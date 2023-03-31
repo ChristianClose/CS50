@@ -29,16 +29,25 @@ int main(int argc, string argv[])
     // TODO #1
     int wordsize = 0;
     bool has_args = argc > 1;
-    bool is_arg_in_range = atoi(argv[1]) < 4 && atoi(argv[1]) < 9;
+    bool is_wordsize_in_range = false;
 
     if(!has_args)
     {
-        printf("Usage: ./wordle wordsize");
+        printf("Usage: ./wordle wordsize\n");
         return 1;
     }
+
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    is_arg_in_range = atoi(argv[1]) < 4 && atoi(argv[1]) < 9;
+    wordsize = atoi(argv[1]);
+    is_wordsize_in_range = wordsize < 4 && wordsize < 9;
+
+    if(!is_wordsize_in_range)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
+
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
