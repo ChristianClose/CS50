@@ -40,7 +40,7 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     wordsize = atoi(argv[1]);
-    is_wordsize_in_range = wordsize < 4 && wordsize < 9;
+    is_wordsize_in_range = wordsize > 4 && wordsize < 9;
 
     if(!is_wordsize_in_range)
     {
@@ -121,9 +121,11 @@ string get_guess(int wordsize)
     // TODO #3
         do
         {
-            scanf("%s", )
+            printf("Input a %d-letter word:\n", wordsize);
+            scanf("%s", guess);
         }
-        while(strlen(guess) < wordsize || strlen(guess) > wordsize);
+        while(strlen(guess) < wordsize && strlen(guess) > wordsize);
+        printf("%l\n", strlen(guess));
     return guess;
 }
 
