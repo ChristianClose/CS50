@@ -4,8 +4,43 @@
 #include <string.h>
 
 // Points assigned to each letter of the alphabet
-const int POINTS[] =     {1,  3,  3,  2,  1,  4,  2,  4,  1,  8,  5,  1,  3,  1,  1,  3, 10,  1,  1,  1,  1,  4,  4,  8,  4, 10};
-const char ALPHABET[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+struct score_map
+{
+    char key;
+    int value;
+};
+
+
+const struct score_map POINTS_MAP[28] =
+{
+    {'a', 1},
+    {'b', 3},
+    {'c', 3},
+    {'d', 2},
+    {'e', 1},
+    {'f', 4},
+    {'g', 2},
+    {'h', 4},
+    {'i', 1},
+    {'j', 8},
+    {'k', 5},
+    {'l', 1},
+    {'m', 3},
+    {'n', 1},
+    {'o', 1},
+    {'p', 3},
+    {'q', 10},
+    {'r', 1},
+    {'s', 1},
+    {'t', 1},
+    {'u', 1},
+    {'v', 4},
+    {'w', 4},
+    {'x', 8},
+    {'y', 4},
+    {'z', 10}
+};
+
 
 int compute_score(string word);
 string lowercase(string word);
@@ -38,15 +73,15 @@ int compute_score(string word)
 {
     int score = 0;
     word = lowercase(word);
-    size_t alphabetLength = sizeof(ALPHABET) / sizeof(ALPHABET[0]);
+    size_t alphabetLength = sizeof(POINTS_MAP) / sizeof(POINTS_MAP[0]);
 
     for (int i = 0; i < alphabetLength; i++)
     {
         for (int j = 0; j < strlen(word); j++)
         {
-            if (word[j] == ALPHABET[i])
+            if (word[j] == POINTS_MAP[i].key)
             {
-                score += POINTS[i];
+                score += POINTS_MAP[i].value;
             }
         }
     }
