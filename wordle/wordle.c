@@ -89,9 +89,19 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        for(int j = 0; j < strlen(wordsize); i++)
+        for(int j = 0; j < strlen(choice); j++)
         {
-            
+            for(int k = 0; k < strlen(guess); k++)
+            {
+                if(guess[k] == choice[j] && k == j)
+                {
+                    status[k] = EXACT;
+                }
+                else if(guess[k] == choice[j])
+                {
+                    status[k] = CLOSE;
+                }
+            }
         }
 
         // Calculate score for the guess
