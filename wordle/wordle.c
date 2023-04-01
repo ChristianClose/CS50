@@ -116,14 +116,12 @@ int main(int argc, string argv[])
 string get_guess(int wordsize)
 {
     string guess = "";
-    string temp = "";
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
         do
         {
-            printf("Input a %d-letter word:\n", wordsize);
-            scanf("%s", guess);
+            guess = get_string("Input a %d-letter word:\n", wordsize);
             printf("%ld\n", strlen(guess));
         }
         while(strlen(guess) < wordsize && strlen(guess) > wordsize);
