@@ -28,10 +28,10 @@ int main(int argc, string argv[])
     // ensure proper usage
     // TODO #1
     int wordsize = 0;
-    bool has_args = argc > 1;
+    bool has_arg = argc == 2;
     bool is_wordsize_in_range = false;
 
-    if(!has_args)
+    if(!has_arg)
     {
         printf("Usage: ./wordle wordsize\n");
         return 1;
@@ -89,7 +89,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        for(int j = 0; j < sizeof(status); j++)
+        for (int j = 0; j < sizeof(status); j++)
         {
             status[j] = WRONG;
         }
@@ -112,7 +112,7 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-    if(won)
+    if (won)
     {
         printf("You won!");
     }
@@ -130,12 +130,11 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
-        do
-        {
-            guess = get_string("Input a %d-letter word:\n", wordsize);
-            printf("%ld\n", strlen(guess));
-        }
-        while(strlen(guess) < wordsize && strlen(guess) > wordsize);
+    do
+    {
+        guess = get_string("Input a %d-letter word:\n", wordsize);
+    }
+    while(strlen(guess) < wordsize || strlen(guess) > wordsize);
     return guess;
 }
 
