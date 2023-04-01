@@ -90,11 +90,12 @@ int main(int argc, string argv[])
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
         printf("%s\n", choice);
+        char temp = choice[0];
         for(int j = 0; j < strlen(choice); j++)
         {
             for(int k = 0; k < strlen(guess); k++)
             {
-                if(guess[k] == choice[j] && k == j)
+                if(guess[k] == choice[j])
                 {
                     status[k] = EXACT;
                 }
@@ -106,10 +107,9 @@ int main(int argc, string argv[])
                 {
                     status[k] = WRONG;
                 }
-
-                printf("\n\n");
-                printf("%d\n", status[k]);
+                temp = choice[j]
             }
+            printf("%d\n", status[j]);
         }
 
         // Calculate score for the guess
