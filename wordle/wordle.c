@@ -91,23 +91,12 @@ int main(int argc, string argv[])
         // TODO #4
         printf("%s\n", choice);
         char temp = choice[0];
-        for(int j = 0; j < strlen(choice); j++)
+        for(int j = 0; j < strlen(guess); j++)
         {
-            for(int k = 0; k < strlen(guess); k++)
+            for(int k = 1; k < strlen(choice); k++)
             {
-                if(guess[k] == choice[j])
-                {
-                    status[k] = EXACT;
-                }
-                else if(guess[k] == choice[j])
-                {
-                    status[k] = CLOSE;
-                }
-                else
-                {
-                    status[k] = WRONG;
-                }
-                temp = choice[j]
+                printf("%c\n", guess[j]);
+                printf("%c\n", choice[k]);
             }
             printf("%d\n", status[j]);
         }
