@@ -89,6 +89,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
+        printf("%s\n", choice);
         for(int j = 0; j < strlen(choice); j++)
         {
             for(int k = 0; k < strlen(guess); k++)
@@ -101,6 +102,13 @@ int main(int argc, string argv[])
                 {
                     status[k] = CLOSE;
                 }
+                else
+                {
+                    status[k] = WRONG;
+                }
+
+                printf("\n\n");
+                printf("%d\n", status[k]);
             }
         }
 
