@@ -89,7 +89,6 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        printf("%s", choice);
         for(int j = 0; j < sizeof(status); j++)
         {
             status[j] = WRONG;
@@ -116,6 +115,10 @@ int main(int argc, string argv[])
     if(won)
     {
         printf("You won!");
+    }
+    else
+    {
+        printf("The word I was looking for was %s.\n", choice);
     }
     // that's all folks!
     return 0;
@@ -163,7 +166,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
                     status[j] = CLOSE;
                 }
             }
-            printf("%d\n", status[j]);
             score += status[j];
         }
 
