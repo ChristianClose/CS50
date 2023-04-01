@@ -89,31 +89,9 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        for(int j = 0; j < sizeof(status); i++)
+        for(int j = 0; j < sizeof(status); j++)
         {
             status[j] = WRONG;
-        }
-
-        printf("%s\n", choice);
-        for(int j = 0; j < strlen(guess); j++)
-        {
-            for(int k = 0; k < strlen(choice); k++)
-            {
-                if(j == k && (guess[j] == choice[k]))
-                {
-                    printf("%c ", guess[j]);
-                    printf("%c\n", choice[k]);
-                    status[j] = EXACT;
-                }
-                else if (guess[j] == choice[k])
-                {
-                    printf("Similar\n");
-                    printf("%c ", guess[j]);
-                    printf("%c\n", choice[k]);
-                    status[j] = CLOSE;
-                }
-            }
-            printf("%d\n", status[j]);
         }
 
         // Calculate score for the guess
@@ -168,6 +146,22 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
                 // if it's in the word, but not the right spot, score CLOSE point (yellow)
         // keep track of the total score by adding each individual letter's score from above
+        for(int j = 0; j < strlen(guess); j++)
+        {
+            for(int k = 0; k < strlen(choice); k++)
+            {
+                if(j == k && (guess[j] == choice[k]))
+                {
+                    status[j] = EXACT;
+                }
+                else if (guess[j] == choice[k])
+                {
+                    status[j] = CLOSE;
+                }
+            }
+            printf("%d\n", status[j]);
+            score += status[j];
+        }
 
     return score;
 }
