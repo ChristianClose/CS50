@@ -89,6 +89,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
+        printf("%s", choice);
         for(int j = 0; j < sizeof(status); j++)
         {
             status[j] = WRONG;
@@ -112,7 +113,10 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-
+    if(won)
+    {
+        printf("You won!");
+    }
     // that's all folks!
     return 0;
 }
@@ -184,9 +188,7 @@ void print_word(string guess, int wordsize, int status[])
         {
             printf(RED"%c", guess[i]);
         }
-
-        printf(RESET"\n");
     }
-    printf("\n");
+    printf(RESET"\n");
     return;
 }
