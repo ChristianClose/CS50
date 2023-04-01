@@ -123,9 +123,9 @@ string get_guess(int wordsize)
         {
             printf("Input a %d-letter word:\n", wordsize);
             scanf("%s", guess);
+            printf("%ld\n", strlen(guess));
         }
         while(strlen(guess) < wordsize && strlen(guess) > wordsize);
-        printf("%l\n", strlen(guess));
     return guess;
 }
 
