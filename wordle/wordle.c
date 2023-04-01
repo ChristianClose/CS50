@@ -89,8 +89,12 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
+        for(int j = 0; j < sizeof(status); i++)
+        {
+            status[j] = WRONG;
+        }
+
         printf("%s\n", choice);
-        char temp = choice[0];
         for(int j = 0; j < strlen(guess); j++)
         {
             for(int k = 0; k < strlen(choice); k++)
@@ -99,16 +103,17 @@ int main(int argc, string argv[])
                 {
                     printf("%c ", guess[j]);
                     printf("%c\n", choice[k]);
+                    status[j] = EXACT;
                 }
                 else if (guess[j] == choice[k])
                 {
                     printf("Similar\n");
                     printf("%c ", guess[j]);
                     printf("%c\n", choice[k]);
+                    status[j] = CLOSE;
                 }
-
             }
-            //printf("%d\n", status[j]);
+            printf("%d\n", status[j]);
         }
 
         // Calculate score for the guess
