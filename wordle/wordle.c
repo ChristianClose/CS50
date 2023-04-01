@@ -93,12 +93,22 @@ int main(int argc, string argv[])
         char temp = choice[0];
         for(int j = 0; j < strlen(guess); j++)
         {
-            for(int k = 1; k < strlen(choice); k++)
+            for(int k = 0; k < strlen(choice); k++)
             {
-                printf("%c\n", guess[j]);
-                printf("%c\n", choice[k]);
+                if(j == k && (guess[j] == choice[k]))
+                {
+                    printf("%c ", guess[j]);
+                    printf("%c\n", choice[k]);
+                }
+                else if (guess[j] == choice[k])
+                {
+                    printf("Similar\n");
+                    printf("%c ", guess[j]);
+                    printf("%c\n", choice[k]);
+                }
+
             }
-            printf("%d\n", status[j]);
+            //printf("%d\n", status[j]);
         }
 
         // Calculate score for the guess
